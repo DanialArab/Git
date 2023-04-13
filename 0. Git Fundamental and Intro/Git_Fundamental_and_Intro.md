@@ -34,4 +34,18 @@ In this course we mostly use command line because:
 
 The best practice is know how to use Git using command line and use both approaches: using command line and GUI tool. There are times which makes sense using a GUI tool and not a command line but other times using a command line is faster and easier. In summary we should use the right tool for the job. So we use mostly command line except some times when using a GUI tool makes a better sense. 
 
+## Git configuration
+
+The first time we need to set up some settings like:
+- Name
+- Email
+- Default editor
+- Line ending, very important one 
+
+We can specify these settings at three different levels:
+
+- System, at the top level the settings we apply here apply to all users of the current computer 
+- Global, the settings we apply here apply to all repositories of the current user 
+- Local, the settings apply to the current repository or the repository in the current folder. We can have different settings for different repositories or different projects 
+
 
