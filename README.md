@@ -3,8 +3,8 @@
 
 ## Creating Snapshots	
 ### Introduction	
-Initializing a Repository	
-Git Workflow	
+- Initializing a Repository	
+-- Git Workflow	
 Staging Files	
 Committing Changes	
 Committing Best Practices	
