@@ -66,8 +66,8 @@ Here is the way I can get help on "config" command:
 |   | git add file1.js file2.js | Stages multiple files |
 |  | git add *.js | Stages with a pattern |
 |  | git add . | Stages the current directory and all its content |
-| Row 3, Column 1 | Row 3, Column 2 | Row 3, Column 3 |
-| Row 3, Column 1 | Row 3, Column 2 | Row 3, Column 3 |
+| Viewing the status | here |  |
+
 
 
 
