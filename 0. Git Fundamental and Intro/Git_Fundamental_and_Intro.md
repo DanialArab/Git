@@ -22,3 +22,19 @@ Git is the most popular version control system in the world, it is almost everyw
 -	Scalable
 -	Cheap branching/merging 
 
+## How to use Git
+
+o	Command line (the fastest and easiest way to get the job done) 
+
+o	Code editors and IDEs
+
+o	Graphical User Interfaces built specifically for using Git, GitKraken Git GUI is Mosh’s favorite GUI for Git it is free for open source projects but for the commercial projects we have to pay annual fee
+
+In this course we mostly use command line because:
+o	GUI tools have limitations, so you NEED to roll up your sleeves and use command line sometimes
+
+o	GUI tools are **not always available BUT command line is always available**. You may connect to a server remotely and you may not have permission to install a GUI tool and in these situations if you don’t know how to use command line you are in trouble 
+
+The best practice is know how to use Git using command line and use both approaches: using command line and GUI tool. There are times which makes sense using a GUI tool and not a command line but other times using a command line is faster and easier. In summary we should use the right tool for the job. So we use mostly command line except some times when using a GUI tool makes a better sense. 
+
+
