@@ -17,3 +17,9 @@ This repo documents my notes from a course 'The Ultimate Git Mastery Course' by 
 - Short Status	
 
 # 2. Browsing History
+
+# 3. Branching
+
+# 4. Collaboration
+
+# 5. Rewriting History
