@@ -31,5 +31,5 @@ This repo documents my notes from a course 'The Ultimate Git Mastery Course' by 
 ## 5. Rewriting History
 
 
-### Here is the Git cheat sheet:
+## 6. Git Cheat Sheet
 
