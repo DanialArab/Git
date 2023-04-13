@@ -6,7 +6,9 @@ Git is the most popular version control system in the world. A version control s
 In a nutshell through using a version control system we can:
 
 o	Track history and
+
 o	Work together
+
 Version control systems fall into two broad categories:
 -	Centralized, the problem with this architecture is single point of failure meaning if the server goes offline we cannot collaborate or save snapshots of our project and so we have to wait until the server comes back online 
 -	Distributed, in this system we don’t have the problem mentioned above with Centralized system, every team member has a copy of the project locally on their machine and if the central server goes offline we can synchronize our work directly with others. Git and Mercurial are examples of distributed version control systems 
