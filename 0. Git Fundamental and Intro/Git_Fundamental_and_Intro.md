@@ -57,6 +57,14 @@ Here is the way I can get help on "config" command:
 
 ## Git cheat sheet
 
+| Column 1 | Column 2 | Column 3 |
+| -------- | -------- | -------- |
+| Creating Snapshots | git init | Row 1, Column 3 |
+| Row 2, Column 1 | Row 2, Column 2 | Row 2, Column 3 |
+| Row 3, Column 1 | Row 3, Column 2 | Row 3, Column 3 |
+
+
+
 ### Creating Snapshots
 - Initializing a repository **git init**
 - Staging files **git add file1.js** # Stages a single file
