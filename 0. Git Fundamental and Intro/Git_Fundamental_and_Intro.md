@@ -61,8 +61,8 @@ Here is the way I can get help on "config" command:
 
 | Creating Snapshots |  |  |
 | -------- | -------- | -------- |
-| Creating Snapshots | git init |  |
-| Row 2, Column 1 | Row 2, Column 2 | Row 2, Column 3 |
+| Initializing a repository | git init |  |
+| Staging files | git add file1.js | Stages a single file |
 | Row 3, Column 1 | Row 3, Column 2 | Row 3, Column 3 |
 
 
