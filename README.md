@@ -2,6 +2,8 @@
 
 This repo documents my notes from a course 'The Ultimate Git Mastery Course' by Mosh Hamedani. The structure of my notes are as follows, and more details on each topic is presented in the files, consistently named similar to the first-level headings below, attached to this repo.
 
+# 0. Git Fundamental and Intro
+### What is Git and why is it so popular?
 
 ## 1. Creating Snapshots	
 ### Introduction	
