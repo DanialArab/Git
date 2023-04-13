@@ -29,3 +29,7 @@ This repo documents my notes from a course 'The Ultimate Git Mastery Course' by 
 ## 4. Collaboration
 
 ## 5. Rewriting History
+
+
+# Here is the Git cheat sheet:
+
