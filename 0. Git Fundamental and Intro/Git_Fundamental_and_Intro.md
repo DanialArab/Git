@@ -58,6 +58,7 @@ Here is the way I can get help on "config" command:
 ## Git cheat sheet
 
 | Creating Snapshots |  |  |
+| -------- | -------- | -------- |
 | Job description | Git command | Comment |
 | -------- | -------- | -------- |
 | Creating Snapshots | git init |  |
