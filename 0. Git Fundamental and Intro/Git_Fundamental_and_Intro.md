@@ -58,8 +58,7 @@ Here is the way I can get help on "config" command:
 ## Git cheat sheet
 
 ### Creating Snapshots
-- Initializing a repository 
-    git init
+- Initializing a repository **git init**
 
 Staging files git add file1.js # Stages a single file
 git add file1.js file2.js # Stages multiple files
