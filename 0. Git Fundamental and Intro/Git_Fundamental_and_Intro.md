@@ -48,4 +48,9 @@ We can specify these settings at three different levels:
 - Global, the settings we apply here apply to all repositories of the current user 
 - Local, the settings apply to the current repository or the repository in the current folder. We can have different settings for different repositories or different projects 
 
+## Getting help
 
+Here is the way I can get help on "config" command: 
+
+- git config --help (space goes to the next page and q to exit)
+- git config -h (short, sweet and a quick refresher help, which gives a short summary of the command, config in this case, and its options) 
