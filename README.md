@@ -10,7 +10,8 @@ This repo documents my notes from a course 'The Ultimate Git Mastery Course' by 
 - Git Cheat Sheet
 
 ## 1. Creating Snapshots	
-### Introduction	
+- Introduction	
+here
 - Initializing a Repository	
 - Git Workflow	
 - Staging Files	
