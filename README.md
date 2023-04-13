@@ -6,6 +6,8 @@ This repo documents my notes from a course 'The Ultimate Git Mastery Course' by 
 - What Git is and why it is so popular
 - How to use Git
 - Git Configuration
+- Getting help
+- Git Cheat Sheet
 
 ## 1. Creating Snapshots	
 ### Introduction	
