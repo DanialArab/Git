@@ -2,7 +2,7 @@
 
 This repo documents my notes from a course 'The Ultimate Git Mastery Course' by Mosh Hamedani. The structure of my notes are as follows, and more details on each topic is presented in the files, consistently named similar to the first-level headings below, attached to this repo.
 
-# 0. Git Fundamental and Intro
+## 0. Git Fundamental and Intro
 ### What is Git and why is it so popular?
 
 ## 1. Creating Snapshots	
@@ -18,10 +18,10 @@ This repo documents my notes from a course 'The Ultimate Git Mastery Course' by 
 - Ignoring Files	
 - Short Status	
 
-# 2. Browsing History
+## 2. Browsing History
 
-# 3. Branching
+## 3. Branching
 
-# 4. Collaboration
+## 4. Collaboration
 
-# 5. Rewriting History
+## 5. Rewriting History
