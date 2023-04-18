@@ -1,6 +1,6 @@
 # Git
 
-This repo documents my notes from the course 'The Ultimate Git Mastery Course' by Mosh Hamedani. The structure of my notes are as follows, and more details on each topic is presented in the files, consistently named similar to the first-level headings below, attached to this repo.
+This repo documents my understanding of Git. The structure of my notes are as follows, and more details on each topic is presented in the files, consistently named similar to the first-level headings below, attached to this repo.
 
 ## 0. Git Fundamental and Intro
 - What Git is and why it is so popular
@@ -34,3 +34,4 @@ here
 
 ## 6. Git Cheat Sheet
 
+Course:'The Ultimate Git Mastery Course' by Mosh Hamedani
