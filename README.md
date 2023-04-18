@@ -11,10 +11,10 @@ This repo documents my understanding of Git. The structure of my notes are as fo
 
 ## 1. Creating Snapshots	
 - Introduction	
-here
 - Initializing a Repository	
 - Git Workflow	
 - Staging Files	
+HERE
 - Committing Changes	
 - Committing Best Practices	
 - Skipping the staging area	
