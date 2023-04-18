@@ -34,4 +34,4 @@ here
 
 ## 6. Git Cheat Sheet
 
-Course:'The Ultimate Git Mastery Course' by Mosh Hamedani
+Course: "The Ultimate Git Mastery", instructor: Mosh Hamedani
