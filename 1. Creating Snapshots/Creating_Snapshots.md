@@ -40,7 +40,11 @@ Some points:
   + Complete snapshot 
 
 These are info about what was changed by who when as well as a complete snapshot of the project at the time it was created so unlike many other version control systems Git does not store deltas or what was changed, it stores the full content, with this we can quickly restore the project to an earlier snapshot without having to compute the changes 
-o	Question: is it waste of a lot of space when saving the full content in every snapshot? NO, b/c Git is very efficient in data storage
-o	 it compresses the content and 
-o	does not store the duplicate contents 
-you don’t need to know how Git stores data b/c it is implementation detail and may even change in the future what you need to know is that each commit contains a complete snapshot of our project and this allows us to quickly get back to the previous state 
+
+**Question: is it waste of a lot of space when saving the full content in every snapshot?** NO, b/c Git is very efficient in data storage
++ it compresses the content and 
++	does not store the duplicate contents 
+
+you don’t need to know how Git stores data since it is implementation detail and may even change in the future what you need to know is that **each commit contains a complete snapshot of our project and this allows us to quickly get back to the previous state.**
+
+## Staging Files
