@@ -56,11 +56,11 @@ Let's write something into two files:
 
 git status
 
-  On branch master
+    On branch master
 
-  No commits yet
+    No commits yet
 
-  Untracked files:
-    (use "git add <file>..." to include in what will be committed)
-          file1.txt
-          file2.txt
+    Untracked files:
+      (use "git add <file>..." to include in what will be committed)
+            file1.txt
+            file2.txt
