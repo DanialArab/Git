@@ -14,7 +14,7 @@ This repo documents my understanding of Git. The structure of my notes are as fo
 - Initializing a Repository	
 - Git Workflow	
 - Staging Files	
-- Committing Changes	HERE
+- Committing Changes	
 - Committing Best Practices	
 - Skipping the staging area	
 - Removing files	
