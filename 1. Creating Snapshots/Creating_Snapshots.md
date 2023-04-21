@@ -65,4 +65,55 @@ git status
             file1.txt
             file2.txt
 
-The two files are in red to indicate they are not in the staging area yet, to add them to the staging area we use **git add** command we can add multiple files separated by **space**, we also can use pattern like git add *.txt to add all the files with txt extension. We can also add the entire directory recursively using git add . but be careful b/c there are times that we don’t want to add large binary files or log files to repository b/c they increase the size of the repository we will learn how to ignore these files later in this section. Just remember git add . add the entire directory recursively. In this demo we go with git add . b/c we only have two small files like
+The two files are in red to indicate they are not in the staging area yet, to add them to the staging area we use **git add** command we can add multiple files separated by **space**, we also can use pattern like git add *.txt to add all the files with txt extension. We can also add the entire directory recursively using **git add .** but be careful b/c there are times that we don’t want to add **large binary files or log files to repository b/c they increase the size of the repository**, we will learn how to ignore these files later in this section. Just remember **git add .** add the entire directory recursively. Let's add the files into the staging area:
+
+    git add .
+
+    git status
+    On branch master
+
+    No commits yet
+
+    Changes to be committed:
+      (use "git rm --cached <file>..." to unstage)
+            new file:   file1.txt
+            new file:   file2.txt
+
+Now the two files are in green meaning they are in the staging area. If I modify file1 like
+
+echo world >> file1.txt
+
+    git status
+
+    On branch master
+
+    No commits yet
+
+    Changes to be committed:
+      (use "git rm --cached <file>..." to unstage)
+            new file:   file1.txt
+            new file:   file2.txt
+
+    Changes not staged for commit:
+      (use "git add <file>..." to update what will be committed)
+      (use "git restore <file>..." to discard changes in working directory)
+            modified:   file1.txt
+
+Now, here we have two files in the staging area b/c they are in green, and we also have one modified file in our working directory now we have the first version of this file1 in the staging area but we changed it after adding it to the staging area so what we have in the working directory is the second version of this file, there are changes that are not staged yet so 
+
+    git add file1.txt
+    
+    git status
+    On branch master
+
+    No commits yet
+
+    Changes to be committed:
+      (use "git rm --cached <file>..." to unstage)
+            new file:   file1.txt
+            new file:   file2.txt
+n
+Now we have both files in the staging area without having any un-staged changes.  Next we see how to commit a snapshot to permanently sore it in the repository. 
+
+## Committing Changes
+
