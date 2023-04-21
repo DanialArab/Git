@@ -48,3 +48,19 @@ These are info about what was changed by who when as well as a complete snapshot
 you don’t need to know how Git stores data since it is implementation detail and may even change in the future what you need to know is that **each commit contains a complete snapshot of our project and this allows us to quickly get back to the previous state.**
 
 ## Staging Files
+
+Let's write something into two files:
+
+  echo hello > file1.txt 
+  echo hello > file2.txt 
+
+git status
+
+  On branch master
+
+  No commits yet
+
+  Untracked files:
+    (use "git add <file>..." to include in what will be committed)
+          file1.txt
+          file2.txt
