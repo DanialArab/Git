@@ -51,8 +51,8 @@ you don’t need to know how Git stores data since it is implementation detail a
 
 Let's write something into two files:
 
-  echo hello > file1.txt 
-  echo hello > file2.txt 
+    echo hello > file1.txt 
+    echo hello > file2.txt 
 
 git status
 
@@ -64,3 +64,5 @@ git status
       (use "git add <file>..." to include in what will be committed)
             file1.txt
             file2.txt
+
+The two files are in red to indicate they are not in the staging area yet, to add them to the staging area we use **git add** command we can add multiple files separated by **space**, we also can use pattern like git add *.txt to add all the files with txt extension. We can also add the entire directory recursively using git add . but be careful b/c there are times that we don’t want to add large binary files or log files to repository b/c they increase the size of the repository we will learn how to ignore these files later in this section. Just remember git add . add the entire directory recursively. In this demo we go with git add . b/c we only have two small files like
