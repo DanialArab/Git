@@ -112,8 +112,8 @@ Now, here we have two files in the staging area b/c they are in green, and we al
       (use "git rm --cached <file>..." to unstage)
             new file:   file1.txt
             new file:   file2.txt
-n
-Now we have both files in the staging area without having any un-staged changes.  Next we see how to commit a snapshot to permanently sore it in the repository. 
+
+Now we have both files in the staging area without having any un-staged changes. Next we see how to commit a snapshot to permanently sore it in the repository. 
 
 ## Committing Changes
 
