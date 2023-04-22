@@ -23,6 +23,23 @@ This repo documents my understanding of Git. The structure of my notes are as fo
 - Short Status	
 
 ## 2. Browsing History
+- Introduction
+- Getting a Repository
+- Viewing the History
+- Filtering the History
+- Formatting the Log Output
+- Aliases
+- Viewing a Commit
+- Viewing the Changes Across Commits
+- Checking Out a Commit
+- Finding Bugs Using Bisect
+- Finding Contributors Using Shortlog
+- Viewing the History of a File
+- Restoring a Deleting File
+- Finding the Author of Line Using Blame
+- Tagging
+- Browsing History Using VSCode
+- Browsing the History Using GitKraken
 
 ## 3. Branching
 
