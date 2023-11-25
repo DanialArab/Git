@@ -1,6 +1,6 @@
 # Git
 
-This repository documents my understanding of Git. The followings are my notes from the course "The Ultimate Git Mastery Courser" by Mosh Hamedani.
+This repository documents my understanding of Git. The followings are my notes from the course **<a href="https://codewithmosh.com/p/the-ultimate-git-course">The Ultimate Git Mastery Courser</a>**
 
 # Table of content
 
