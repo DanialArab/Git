@@ -10,18 +10,18 @@ This repository documents my understanding of Git. The followings are my notes f
     3. [Git Configuration](#4)
     4. [Getting Help](#5)
     5. [Git Cheat Sheet](#6)
-2. [Creating Snapshots	](#7)
-  1. [Introduction]
-- Initializing a Repository	
-- Git Workflow	
-- Staging Files	
-- Committing Changes	
-- Committing Best Practices	
-- Skipping the staging area	
-- Removing files	
-- Renaming or moving files	
-- Ignoring Files	
-- Short Status	
+2. [Creating Snapshots](#7)
+  1. [Introduction](#8)
+  2. [Initializing a Repository](#9)
+  3. [Git Workflow](#10)
+  4. [Staging Files](#11)
+  5. [Committing Changes](#12)
+  6. [Committing Best Practices](#13)
+  7. [Skipping the staging area](#14)
+  8. [Removing files](#15)
+  9. [Renaming or moving files](#16)
+  10. [Ignoring Files](#17)
+  11. [Short Status](#18)
 
 ## 2. Browsing History
 - Introduction
