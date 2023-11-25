@@ -1,6 +1,7 @@
 # Git
 
-This repo documents my understanding of Git. The structure of my notes are as follows, and more details on each topic is presented in the Markdown files, named consistently with the first-level headings below, attached to this repo.
+This repository documents my understanding of Git. The followings are my notes from the course "The Ultimate Git Mastery Courser" by Mosh Hamedani.
+
 
 ## 0. Git Fundamental and Intro
 - What Git is and why it is so popular
