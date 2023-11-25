@@ -22,25 +22,24 @@ This repository documents my understanding of Git. The followings are my notes f
     9. [Renaming or moving files](#16)
     10. [Ignoring Files](#17)
     11. [Short Status](#18)
-
-## 2. Browsing History
-- Introduction
-- Getting a Repository
-- Viewing the History
-- Filtering the History
-- Formatting the Log Output
-- Aliases
-- Viewing a Commit
-- Viewing the Changes Across Commits
-- Checking Out a Commit
-- Finding Bugs Using Bisect
-- Finding Contributors Using Shortlog
-- Viewing the History of a File
-- Restoring a Deleting File
-- Finding the Author of Line Using Blame
-- Tagging
-- Browsing History Using VSCode
-- Browsing the History Using GitKraken
+3. [Browsing History](#19)
+    1. [Introduction](#20)
+    2. [Getting a Repository](#21)
+    3. [Viewing the History](#22)
+    4. [Filtering the History](#23)
+    5. [Formatting the Log Output](#24)
+    6. [Aliases](#25)
+    7. [Viewing a Commit](#26)
+    8. [Viewing the Changes Across Commits](#27)
+    9. [Checking Out a Commit](#28)
+    10. [Finding Bugs Using Bisect](#29)
+    11. [Finding Contributors Using Shortlog](#30)
+    12. [Viewing the History of a File](#31)
+    13. [Restoring a Deleting File](#32)
+    14. [Finding the Author of Line Using Blame](#33)
+    15. [Tagging](#34)
+    16. [Browsing History Using VSCode](#35)
+    17. [Browsing the History Using GitKraken](#36)
 
 
 <a name="1"></a>
