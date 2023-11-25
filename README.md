@@ -83,7 +83,7 @@ The best practice is know how to use Git using command line and use both approac
 
 Git bash (born against shell) emulates the Unix/Linux environment in Windows. 
 
-## Git configuration HERE 
+## Git configuration 
 
 The first time we need to set up some settings like:
 - Name
@@ -93,7 +93,7 @@ The first time we need to set up some settings like:
 
 We can specify these settings at three different levels:
 
-- System, at the top level the settings we apply here apply to all users of the current computer 
+- System, at the very top level the settings we apply here apply to all users of the current computer 
 - Global, the settings we apply here apply to all repositories of the current user 
 - Local, the settings apply to the current repository or the repository in the current folder. We can have different settings for different repositories or different projects 
 
