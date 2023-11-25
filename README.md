@@ -73,7 +73,7 @@ Git is the most popular version control system in the world, it is almost everyw
 
 - Command line (the fastest and easiest way to get the job done) 
 - Code editors and IDEs
-- Graphical User Interfaces built specifically for using Git, GitKraken Git GUI is Mosh’s favorite GUI for Git it is free for open source projects but for the commercial projects we have to pay annual fee
+- Graphical User Interfaces built specifically for using Git, **GitKraken Git GUI** is Mosh’s favorite GUI for Git it is free for open source projects but for the commercial projects we have to pay annual fee
 
 In this course we mostly use command line because:
 - GUI tools have limitations, so you NEED to roll up your sleeves and use command line sometimes
