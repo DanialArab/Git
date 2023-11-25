@@ -98,18 +98,19 @@ We can specify these settings at three different levels:
 - Local, the settings apply to the current repository or the repository in the current folder. We can have different settings for different repositories or different projects 
 
 
-        git 
+        git config --global user.name "Danial Arab"
+        git config --global user.email danial.arab@trulioo.com
         git config --global core.editor "code --wait" # with the wait flag we tell the terminal window to wait until we close the new vs code instance
-        git 
+        git config --global core.autocrlf input # crlf = carriage return line feed, for mac/Linux ---> input for windows ---> true
 
-In different OSs, the end of lines are indicated differently:
+In different OSs, the end of lines are indicated/marked differently:
 
 ![](https://github.com/DanialArab/images/blob/main/Git/end%20of%20lines.png)
 
 
 all these configuration settings are stored in a text file, we can edit that file using our default editor, vs code:
 
-        git config --global -e # this will open our default editor to edit all the global settings          
+        git config --global -e # This will open our default editor to edit all the global settings          
 
 ## Getting help
 
