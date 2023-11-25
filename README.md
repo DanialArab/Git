@@ -81,7 +81,7 @@ In this course we mostly use command line because:
 
 The best practice is know how to use Git using command line and use both approaches: using command line and GUI tool. There are times which makes sense using a GUI tool and not a command line but other times using a command line is faster and easier. In summary we should use the right tool for the job. So we use mostly command line except some times when using a GUI tool makes a better sense. 
 
-## Git configuration
+## Git configuration HERE 
 
 The first time we need to set up some settings like:
 - Name
