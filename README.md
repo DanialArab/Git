@@ -97,8 +97,20 @@ We can specify these settings at three different levels:
 - Global, the settings we apply here apply to all repositories of the current user 
 - Local, the settings apply to the current repository or the repository in the current folder. We can have different settings for different repositories or different projects 
 
+
+        git 
         git config --global core.editor "code --wait" # with the wait flag we tell the terminal window to wait until we close the new vs code instance
-  
+        git 
+
+In different OSs, the end of lines are indicated differently:
+
+![](https://github.com/DanialArab/images/blob/main/Git/end%20of%20lines.png)
+
+
+all these configuration settings are stored in a text file, we can edit that file using our default editor, vs code:
+
+        git config --global -e # this will open our default editor to edit all the global settings          
+
 ## Getting help
 
 Here is the way I can get help on "config" command: 
