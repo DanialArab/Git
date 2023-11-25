@@ -97,6 +97,8 @@ We can specify these settings at three different levels:
 - Global, the settings we apply here apply to all repositories of the current user 
 - Local, the settings apply to the current repository or the repository in the current folder. We can have different settings for different repositories or different projects 
 
+        git config --global core.editor "code --wait" # with the wait flag we tell the terminal window to wait until we close the new vs code instance
+  
 ## Getting help
 
 Here is the way I can get help on "config" command: 
