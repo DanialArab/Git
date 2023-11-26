@@ -5,7 +5,7 @@ This repository documents my understanding of Git. The followings are my notes f
 # Table of content
 
 1. [Git Fundamental and Intro](#1)
-    1. [What Git is and why it is so popula](#2)
+    1. [What Git is and why it is so popular](#2)
     2. [How to use Git](#3)
     3. [Git Configuration](#4)
     4. [Getting Help](#5)
@@ -43,11 +43,10 @@ This repository documents my understanding of Git. The followings are my notes f
 
 
 <a name="1"></a>
-## 1. Introduction
+## Git Fundamental and Intro
 
-# Git Fundamental and Intro
-
-## What is Git and why is it so popular?
+<a name="2"></a>
+### What is Git and why is it so popular?
 
 Git is the most popular version control system in the world. A version control system records the changes to our code over time in a **special database called repository**. We can look at our project history and see who has made what changes, when, and why. And in case required we can easily revert our project back to an earlier stage. 
 In a nutshell through using a version control system we can:
@@ -69,7 +68,8 @@ Git is the most popular version control system in the world, it is almost everyw
 -	Scalable
 -	Cheap branching/merging 
 
-## How to use Git
+<a name="3"></a>
+### How to use Git
 
 - Command line (the fastest and easiest way to get the job done) 
 - Code editors and IDEs
@@ -83,7 +83,8 @@ The best practice is know how to use Git using command line and use both approac
 
 Git bash (born against shell) emulates the Unix/Linux environment in Windows. 
 
-## Git configuration 
+<a name="4"></a>
+### Git configuration 
 
 The first time we need to set up some settings like:
 - Name
@@ -112,14 +113,16 @@ all these configuration settings are stored in a text file, we can edit that fil
 
         git config --global -e # This will open our default editor to edit all the global settings          
 
-## Getting help
+<a name="5"></a>
+### Getting help
 
 Here is the way I can get help on "config" command: 
 
 - git config --help (space goes to the next page and q to exit)
 - git config -h (short, sweet and a quick refresher help, which gives a short summary of the command, config in this case, and its options) 
 
-## Git cheat sheet
+<a name="6"></a>
+### Git cheat sheet
 
 
 
@@ -130,7 +133,7 @@ Here is the way I can get help on "config" command:
 |   | git add file1.js file2.js | Stages multiple files |
 |  | git add *.js | Stages with a pattern |
 |  | git add . | Stages the current directory and all its content |
-| Viewing the status | here |  |
+| Viewing the status |  |  |
 
 
 
