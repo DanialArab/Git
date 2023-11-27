@@ -137,13 +137,16 @@ Here is the way I can get help on "config" command:
 
 
 
-# Creating Snapshots
+<a name="7"></a>
+## Creating Snapshots
 
-## Introduction
+<a name="8"></a>
+### Introduction
 
 The first thing to know to be able to use Git effectively is **creating snapshots** of your project. 
 
-## Initializing a Git Repository
+<a name="9"></a>
+### Initializing a Git Repository
 
 Some points on how to initialize a git repo:
 
@@ -186,7 +189,8 @@ These are info about what was changed by who when as well as a complete snapshot
 
 you don’t need to know how Git stores data since it is implementation detail and may even change in the future what you need to know is that **each commit contains a complete snapshot of our project and this allows us to quickly get back to the previous state.**
 
-## Staging Files
+<a name="10"></a>
+### Staging Files
 
 Let's write something into two files:
 
@@ -254,7 +258,8 @@ Now, here we have two files in the staging area b/c they are in green, and we al
 
 Now we have both files in the staging area without having any un-staged changes. Next we see how to commit a snapshot to permanently sore it in the repository. 
 
-## Committing Changes
+<a name="11"></a>
+### Committing Changes
 
 Now we have a snapshot in the staging area which is ready to be permanently stored in the repository:
 
@@ -294,7 +299,8 @@ After saving changes we close this file in the VS Code. Back to the terminal:
 
 we had three insertion: 2 in file1 hello world and 1 in file2. Now what we have in our working directory is exactly the same content as we have in our staging area which is exactly the same content as we have in the last commit. 
 
-##  Committing Best Practices
+<a name="12"></a>
+###  Committing Best Practices
 
 + Commit size matters, your commit should not be too big or too small. 
 + The whole point of committing is to record check points as we go so it does not make sense to commit after three days of coding! We want always go back and recover our code if we screw up. 
@@ -303,7 +309,8 @@ we had three insertion: 2 in file1 hello world and 1 in file2. Now what we have 
 +	Have a habit of meaningful commit messages because all of these messages will be shown in history, if your messages are cryptic they will not be helpful to you and other team members, if you do too many things in one commit it will also be hard to have a meaningful message! 
 +	In terms of wording in your commit messages, most people prefer to use present tense like “Fix the bug”, instead of “Fixed the bug” you can choose either but be consistent with other team members
 
-## Skipping the Staging Area
+<a name="13"></a>
+### Skipping the Staging Area
 
 Do we always have to stage our change before committing them? No, we can skip it **BUT** only do this if you really know what you are doing and you are 100% sure your code and changes don’t need to be reviewed. Just remember 99% of times you should always stage your changes before committing. 
 
@@ -324,7 +331,8 @@ Here I will not use git add file1.txt to first stage the changes and instead str
 
 I could have done git commit -a -m"Fixed the bugs that prevent users from signing in"
 
-## Removing files
+<a name="14"></a>
+### Removing files
 
 If we want to delete a file which contains unused code, let’s say I have two files in my working directory and also in my staging area which are both committed:
 
@@ -408,7 +416,8 @@ So remember to remove a file, we have to remove it both from our working directo
     dania@DESKTOP-IQ7H5F1 MINGW64 ~/Desktop/Moon (master)
     $ git rm file2.txt
 
-## Renaming or moving files
+<a name="15"></a>
+### Renaming or moving files
 
 Obvious Reminder: mv is a Linux command for moving and renaming files.
 
@@ -475,7 +484,8 @@ When using git mv main.py main.js changes are applied to both working directory 
      1 file changed, 0 insertions(+), 0 deletions(-)
      rename file1.txt => main.js (100%)
 
-  ## Ignoring Files
+  <a name="16"></a>
+### Ignoring Files
 
 
 
