@@ -161,7 +161,7 @@ Some points on how to initialize a git repo:
 <a name="10"></a>
 ### Git Workflow
 
-We have a project directory in which we have a hidden subdirectory i.e., our .git repository. As part of our every day tasks we modify more and more files in our project directory, when our project reaches a state that we want to record we commit those changes into our repository. Creating a commit is like taking a snapshot of our project. In Git we have a special area called **staging area or index**, which does not exist in most other version control systems, we essentially propose what we want for the next commit or snapshot. 
+We have a project directory in which we have a hidden subdirectory i.e., our .git repository. As part of our every day tasks we modify more and more files in our project directory, when our project reaches a state that we want to record we commit those changes into our repository. **Creating a commit is like taking a snapshot of our project**. In Git we have a special area called **staging area or index**, which does not exist in most other version control systems, we essentially propose what we want for the next commit or snapshot. 
 
 When we are done making changes in our file in project directory we add them into the staging area for review and if everything is good then we make a commit then the snapshot will be permanently stored in our repository. So **staging area allows us to review our work before recording a snapshot.** If some of the changes should not be recorded as part of the next snapshot we can **un-stage them and commit them as part of another snapshot.**
 
