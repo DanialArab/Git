@@ -328,7 +328,7 @@ Do we always have to stage our change before committing them? No, we can skip it
 
 Here I will not use git add file1.txt to first stage the changes and instead straight I commit the changes like:
 
-    git commit -am “Fixed the bugs that prevented users from signing in”. 
+    git commit -am “Fixed the bugs that prevented users from signing in”. # here we provide the option -a as all that means we want to commit all the modified files 
 
 I could have done git commit -a -m"Fixed the bugs that prevent users from signing in"
 
