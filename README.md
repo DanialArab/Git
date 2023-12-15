@@ -412,7 +412,7 @@ so file2.txt is no longer in the staging area.
     On branch master
     nothing to commit, working tree clean
 
-So remember to remove a file, we have to remove it both from our working directory and also from the staging area. Because it is a very common operation git gives us a command, **git rm**, which performs both steps in one go: 
+So remember to remove a file, we have to remove it both from our working directory and also from the staging area. Because it is a very common operation git gives us a command, **git rm**, which performs both steps (i.e., removing the file from the working directory and also from the staging area) in one go (but we still need to commit changes): 
 
     dania@DESKTOP-IQ7H5F1 MINGW64 ~/Desktop/Moon (master)
     $ git rm file2.txt
