@@ -490,7 +490,203 @@ When using git mv main.py main.js changes are applied to both working directory 
 
 In almost every project we should tell git to ignore certain files/directories e.g., we don't want to include log files or binary files that get generated as a result of compiling our code, adding these files only increases the size of our repository without adding any values. Every developer can have their own log files. Log files are not something we want to share and synchronize with other team members. 
 
-here
+         mkdir logs
+        (base) danial@LYVR-G6423233FB:/mnt/c/Users/danial.arab/Desktop/git-course/Moon$ ls
+        file1.js  logs
+        (base) danial@LYVR-G6423233FB:/mnt/c/Users/danial.arab/Desktop/git-course/Moon$ echo hello > logs/dev.log
+        (base) danial@LYVR-G6423233FB:/mnt/c/Users/danial.arab/Desktop/git-course/Moon$ git status
+        On branch master
+        Untracked files:
+          (use "git add <file>..." to include in what will be committed)
+                logs/
+
+        nothing added to commit but untracked files present (use "git add" to track)
+        (base) danial@LYVR-G6423233FB:/mnt/c/Users/danial.arab/Desktop/git-course/Moon$
+
+here we do not want to add the logs directory to the staging area because we do not want Git to track this. So we have to create a special file called **.gitignore** (this file does not have a name and just has an extension and it should be in the root of the project) so:
+
+        echo logs/ > .gitignore 
+
+now let's open it using VS Code:
+
+        code .gitignore
+
+in this file we have a single entry as logs/. We can list as many files and directories as we want here like:
+
+        logs/
+        main.log
+        *.log
+
+now after saving the changes and closing the VS Code, back in the terminal:
+
+        (base) danial@LYVR-G6423233FB:/mnt/c/Users/danial.arab/Desktop/git-course/Moon$ git status
+        On branch master
+        Untracked files:
+          (use "git add <file>..." to include in what will be committed)
+                .gitignore
+        
+        nothing added to commit but untracked files present (use "git add" to track)
+
+now Git no longer says we have a new directory called logs because it is ignoring it, instead, it says we have a new file called .gitignore. So let's add this file to the staging area: 
+
+        (base) danial@LYVR-G6423233FB:/mnt/c/Users/danial.arab/Desktop/git-course/Moon$ git add .gitignore
+        (base) danial@LYVR-G6423233FB:/mnt/c/Users/danial.arab/Desktop/git-course/Moon$ git commit -m"Add gitignore"
+        [master 80fc387] Add gitignore
+         1 file changed, 3 insertions(+)
+         create mode 100644 .gitignore
+
+This is how we can ignore files and directories in Git. But remember this works only if we have not already included a file or directory into the repository. In other words, if we accidentally include a file in the repository and then later add it to gitignore, Git will not ignore that. 
+
+        (base) danial@LYVR-G6423233FB:/mnt/c/Users/danial.arab/Desktop/git-course/Moon$ mkdir bin
+
+let's imagine this bin directory contains our compiled source code.
+
+        (base) danial@LYVR-G6423233FB:/mnt/c/Users/danial.arab/Desktop/git-course/Moon$ ls
+        bin  file1.js  logs
+        (base) danial@LYVR-G6423233FB:/mnt/c/Users/danial.arab/Desktop/git-course/Moon$ echo hello > bin/app.bin
+        (base) danial@LYVR-G6423233FB:/mnt/c/Users/danial.arab/Desktop/git-course/Moon$ git status
+        On branch master
+        Untracked files:
+          (use "git add <file>..." to include in what will be committed)
+                bin/
+        
+        nothing added to commit but untracked files present (use "git add" to track)
+
+now let's assume we accidentally commit this to our repository: 
+
+        (base) danial@LYVR-G6423233FB:/mnt/c/Users/danial.arab/Desktop/git-course/Moon$ git add .
+        (base) danial@LYVR-G6423233FB:/mnt/c/Users/danial.arab/Desktop/git-course/Moon$ git commit -m"Added bin."
+        [master 66a60dc] Added bin.
+         1 file changed, 1 insertion(+)
+         create mode 100644 bin/app.bin
+
+here the problem is that every time we compile our code Git will say that this bin/app.bin file is changed and we have to stage it and then commit it which does not make sense. Why should we commit this file every time we compile our application? So back to the .igignore file, we add this bin directory as well:
+
+        logs/
+        main.log
+        *.log
+        bin/
+ 
+ then back to the terminal:
+
+        (base) danial@LYVR-G6423233FB:/mnt/c/Users/danial.arab/Desktop/git-course/Moon$ git status
+        On branch master
+        Changes not staged for commit:
+          (use "git add <file>..." to update what will be committed)
+          (use "git restore <file>..." to discard changes in working directory)
+                modified:   .gitignore
+        
+        no changes added to commit (use "git add" and/or "git commit -a")
+
+which shows that we modified .gitignore, let's stage and commit this change:
+
+        (base) danial@LYVR-G6423233FB:/mnt/c/Users/danial.arab/Desktop/git-course/Moon$ git add .
+        (base) danial@LYVR-G6423233FB:/mnt/c/Users/danial.arab/Desktop/git-course/Moon$ git commit -m"Included bin/ in gitignore"
+        [master 5eccbdd] Included bin/ in gitignore
+         1 file changed, 2 insertions(+), 1 deletion(-)
+
+here Git will NOT ignore the changes in this directory because it is already tracking this directory. Like if we modify our bin/app.bin file and see that Git still tracks its changes:
+
+        (base) danial@LYVR-G6423233FB:/mnt/c/Users/danial.arab/Desktop/git-course/Moon$ echo helloworld > bin/app.bin
+        (base) danial@LYVR-G6423233FB:/mnt/c/Users/danial.arab/Desktop/git-course/Moon$ cat bin/app.bin
+        helloworld
+        (base) danial@LYVR-G6423233FB:/mnt/c/Users/danial.arab/Desktop/git-course/Moon$ git status
+        On branch master
+        Changes not staged for commit:
+          (use "git add <file>..." to update what will be committed)
+          (use "git restore <file>..." to discard changes in working directory)
+                modified:   bin/app.bin
+        
+        no changes added to commit (use "git add" and/or "git commit -a") 
+
+to solve this problem we first need to remove this directory from the staging area. To see our files in the staging area: 
+
+        (base) danial@LYVR-G6423233FB:/mnt/c/Users/danial.arab/Desktop/git-course/Moon$ git ls
+        -files
+        .gitignore
+        bin/app.bin
+        file1.js
+
+as seen, the bin directory is in the staging area and we should remove it. 
+
+Point: **git rm** removes the file/directory from both the working directory and the staging area, which is not what we want. We do not want to remove the bin/app.bin from the working directory because that is how we launch our application. We want to remove the bin directory ONLY from the staging area: 
+
+        (base) danial@LYVR-G6423233FB:/mnt/c/Users/danial.arab/Desktop/git-course/Moon$ git rm -h
+        usage: git rm [<options>] [--] <file>...
+        
+            -n, --dry-run         dry run
+            -q, --quiet           do not list removed files
+            --cached              only remove from the index
+            -f, --force           override the up-to-date check
+            -r                    allow recursive removal
+            --ignore-unmatch      exit with a zero status even if nothing matched
+            --sparse              allow updating entries outside of the sparse-checkout cone
+            --pathspec-from-file <file>
+                                  read pathspec from file
+            --pathspec-file-nul   with --pathspec-from-file, pathspec elements are separated with NUL character
+
+as seen, --cached option is what we need to only remove files/directories from the index (index is the old term for the staging area, index is used a lot in the Git documentation) so:
+
+        (base) danial@LYVR-G6423233FB:/mnt/c/Users/danial.arab/Desktop/git-course/Moon$ git rm --cached -r bin/
+        rm 'bin/app.bin'
+
+now this entire directory is removed from the staging area, as is clear:
+
+        (base) danial@LYVR-G6423233FB:/mnt/c/Users/danial.arab/Desktop/git-course/Moon$ git ls-files
+        .gitignore
+        file1.js
+
+now let's run the git status:
+
+        (base) danial@LYVR-G6423233FB:/mnt/c/Users/danial.arab/Desktop/git-course/Moon$ git status
+        On branch master
+        Changes to be committed:
+          (use "git restore --staged <file>..." to unstage)
+                deleted:    bin/app.bin
+
+which shows that this directory is deleted from the staging area. 
+
+        (base) danial@LYVR-G6423233FB:/mnt/c/Users/danial.arab/Desktop/git-course/Moon$ git commit -m"Removed the bin directory that was accidentally commited"
+        [master 3ad8ae6] Removed the bin directory that was accidentally commited
+         1 file changed, 1 deletion(-)
+         delete mode 100644 bin/app.bin
+
+ from this point forward Git no longer tracks the changes in this directory. Let's test it:
+
+        (base) danial@LYVR-G6423233FB:/mnt/c/Users/danial.arab/Desktop/git-course/Moon$ echo test >> bin/app.bin
+        (base) danial@LYVR-G6423233FB:/mnt/c/Users/danial.arab/Desktop/git-course/Moon$ git status
+        On branch master
+        nothing to commit, working tree clean
+
+at https://github.com/github/gitignore we can find various gitignore templates for different programming languages. For example, for Java we have:
+
+        # Compiled class file
+        *.class
+        
+        # Log file
+        *.log
+        
+        # BlueJ files
+        *.ctxt
+        
+        # Mobile Tools for Java (J2ME)
+        .mtj.tmp/
+        
+        # Package Files #
+        *.jar
+        *.war
+        *.nar
+        *.ear
+        *.zip
+        *.tar.gz
+        *.rar
+        
+        # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+        hs_err_pid*
+        replay_pid*
+
+as shown above, for the Java projects it is a great idea to exclude all the class files because these files are automatically generated when we compile the code and so there is no need to include them in the repository. As shown above, we have various patterns like all the class or log files.
+
 
 ## 3. Branching
 
