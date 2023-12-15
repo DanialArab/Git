@@ -485,7 +485,7 @@ When using git mv main.py main.js changes are applied to both working directory 
      1 file changed, 0 insertions(+), 0 deletions(-)
      rename file1.txt => main.js (100%)
 
-  <a name="17"></a>
+<a name="17"></a>
 ### Ignoring Files
 
 In almost every project we should tell git to ignore certain files/directories e.g., we don't want to include log files or binary files that get generated as a result of compiling our code, adding these files only increases the size of our repository without adding any values. Every developer can have their own log files. Log files are not something we want to share and synchronize with other team members. 
@@ -686,6 +686,11 @@ at https://github.com/github/gitignore we can find various gitignore templates f
         replay_pid*
 
 as shown above, for the Java projects it is a great idea to exclude all the class files because these files are automatically generated when we compile the code and so there is no need to include them in the repository. As shown above, we have various patterns like all the class or log files.
+
+<a name="18"></a>
+### Short Status
+
+here 
 
 
 ## 3. Branching
