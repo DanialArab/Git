@@ -690,8 +690,66 @@ as shown above, for the Java projects it is a great idea to exclude all the clas
 <a name="18"></a>
 ### Short Status
 
-here 
+Since the output of the git status is too wordy, very comprehensive though, we may provide the -s flag as an alternative:
 
+        (base) danial@LYVR-G6423233FB:/mnt/c/Users/danial.arab/Desktop/git-course/Moon$ echo sky >> file1.js
+        (base) danial@LYVR-G6423233FB:/mnt/c/Users/danial.arab/Desktop/git-course/Moon$ echo sky > file2.js
+        
+        (base) danial@LYVR-G6423233FB:/mnt/c/Users/danial.arab/Desktop/git-course/Moon$ git status
+        On branch master
+        Changes not staged for commit:
+          (use "git add <file>..." to update what will be committed)
+          (use "git restore <file>..." to discard changes in working directory)
+                modified:   file1.js
+        
+        Untracked files:
+          (use "git add <file>..." to include in what will be committed)
+                file2.js
+        
+        no changes added to commit (use "git add" and/or "git commit -a")
+
+as seen, we have modified file1.js and also created a new untracked file, file2.js. So alternativel, if we run git status with -s flag w get:
+
+        (base) danial@LYVR-G6423233FB:/mnt/c/Users/danial.arab/Desktop/git-course/Moon$ git status -s
+         M file1.js
+        ?? file2.js
+
+**The first, left, column represents the staging area and the right column represents the working directory.** So we have modified file1 and that is why we have a red M in the right column meaning we have some changes here in the working directory that are not yet in the staging area and so that is why we do not have anything in the left column. File2 is a new file and that is why we have 2 question marks in both columns. 
+
+Let's add file1 to the staging area:
+
+        (base) danial@LYVR-G6423233FB:/mnt/c/Users/danial.arab/Desktop/git-course/Moon$ git add file1.js
+        (base) danial@LYVR-G6423233FB:/mnt/c/Users/danial.arab/Desktop/git-course/Moon$ git status -s
+        M  file1.js
+        ?? file2.js
+
+now for file1, we have a green M in the left/staging area column meaning all the changes we have in the working area are now in the staging area, and in the right column, we do not have anything since we do not have any extra changes. 
+
+When we stage a file Git takes a snapshot of that file and puts it in the staging area so if we modify that file after staging it we have to restage the changes:
+
+        (base) danial@LYVR-G6423233FB:/mnt/c/Users/danial.arab/Desktop/git-course/Moon$ echo ocean >> file1.js
+        (base) danial@LYVR-G6423233FB:/mnt/c/Users/danial.arab/Desktop/git-course/Moon$ git status -s
+        MM file1.js
+        ?? file2.js
+
+here in the left column, we have a green M meaning we have some changes in the staging area but also we have some additional changes in the working directory that are not added to the staging area. 
+
+
+        (base) danial@LYVR-G6423233FB:/mnt/c/Users/danial.arab/Desktop/git-course/Moon$ git add file1.js
+        (base) danial@LYVR-G6423233FB:/mnt/c/Users/danial.arab/Desktop/git-course/Moon$ git status -s
+        M  file1.js
+        ?? file2.js
+
+now all the changes we had in the working directory are now in the staging area. 
+
+now let's add file2 to the staging area:
+
+(base) danial@LYVR-G6423233FB:/mnt/c/Users/danial.arab/Desktop/git-course/Moon$ git add file2.js
+(base) danial@LYVR-G6423233FB:/mnt/c/Users/danial.arab/Desktop/git-course/Moon$ git status -s
+M  file1.js
+A  file2.js
+
+now for file2 we have a green A in the left/staging area column, which represents added so file2 is added to the staging area. 
 
 ## 3. Branching
 
