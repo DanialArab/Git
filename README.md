@@ -744,10 +744,10 @@ now all the changes we had in the working directory are now in the staging area.
 
 now let's add file2 to the staging area:
 
-(base) danial@LYVR-G6423233FB:/mnt/c/Users/danial.arab/Desktop/git-course/Moon$ git add file2.js
-(base) danial@LYVR-G6423233FB:/mnt/c/Users/danial.arab/Desktop/git-course/Moon$ git status -s
-M  file1.js
-A  file2.js
+        (base) danial@LYVR-G6423233FB:/mnt/c/Users/danial.arab/Desktop/git-course/Moon$ git add file2.js
+        (base) danial@LYVR-G6423233FB:/mnt/c/Users/danial.arab/Desktop/git-course/Moon$ git status -s
+        M  file1.js
+        A  file2.js
 
 now for file2 we have a green A in the left/staging area column, which represents added so file2 is added to the staging area. 
 
