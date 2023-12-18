@@ -22,6 +22,8 @@ This repository documents my understanding of Git. The followings are my notes f
     9. [Renaming or moving files](#16)
     10. [Ignoring Files](#17)
     11. [Short Status](#18)
+    12. [Viewing Staged and Unstaged Changes](#19)
+    13. [Visual Diff Tools](#20)
 3. [Browsing History](#19)
     1. [Introduction](#20)
     2. [Getting a Repository](#21)
@@ -750,6 +752,74 @@ now let's add file2 to the staging area:
         A  file2.js
 
 now for file2 we have a green A in the left/staging area column, which represents added so file2 is added to the staging area. 
+
+<a name="19"></a>
+### Viewing Staged and Unstaged Changes
+
+**Before committing our changes which are in the staging area we need to review our code.** We do not want to commit bad or broken code to our repository. So as the best practice, we always have to first review what we have in the staging area before making a commit. git status command only shows the files that have been affected but how we can see the exact lines of code that we have staged? using the diff command, which gives us what we have in the staging area that goes into the next commit: 
+
+        (base) danial@LYVR-G6423233FB:/mnt/c/Users/danial.arab/Desktop/git-course/Moon$ git diff --staged
+        diff --git a/file1.js b/file1.js
+        index 94954ab..c7bc16c 100644
+        --- a/file1.js
+        +++ b/file1.js
+        @@ -1,2 +1,4 @@
+         hello
+         world
+        +sky
+        +ocean
+        diff --git a/file2.js b/file2.js
+        new file mode 100644
+        index 0000000..f5e95e7
+        --- /dev/null
+        +++ b/file2.js
+        @@ -0,0 +1 @@
+        +sky
+
+Comparing the files using the terminal is not the best way to do it, we quite often use visual tools, but we need to understand the output of this command for when we do not have access to the visual tools or maybe in the interview you may get asked. 
+
+some points:
++ we are comparing two copies of the same file like a/file1.js b/file1.js
++ the first copy a/file1.js is the old copy which we have in the last commit
++ the second copy, the newer one, is what we currently have in the staging area
++ Below the files name we have some metadata: index 94954ab..c7bc16c 100644 which does not matter
++  after that we have a legend:
+      + changes in the old copy are indicated with a minus sign whereas changes in the new copy are indicated by the plus sign
++ after that we have a header, @@ -1,2 +1,4 @@, with some information about what part of our files were changed:
+          + we have two segments one is prefixed with - sign giving us info about the old copy like what we had in the last snapshot and the other is prefixed with + sign containing info about the new copy and what we have in the staging area
++ for file2 in the legend, we do not have the old copy, --- /dev/null, because it is an entirely new file and in the last commit we did not have a file called file2
+
+what if we want to see the changes in our working directory that are not staged yet? to do that we run git diff without any argument:
+
+        (base) danial@LYVR-G6423233FB:/mnt/c/Users/danial.arab/Desktop/git-course/Moon$ git diff
+
+I got nothing as output because I already staged all the changes in the working directory, which can be verified with/;
+
+        (base) danial@LYVR-G6423233FB:/mnt/c/Users/danial.arab/Desktop/git-course/Moon$ git status -s
+        M  file1.js
+        A  file2.js
+
+so if i modify file1 and then run git diff again:
+
+        (base) danial@LYVR-G6423233FB:/mnt/c/Users/danial.arab/Desktop/git-course/Moon$ code file1.js
+        (base) danial@LYVR-G6423233FB:/mnt/c/Users/danial.arab/Desktop/git-course/Moon$ git status -s
+        MM file1.js
+        A  file2.js
+        (base) danial@LYVR-G6423233FB:/mnt/c/Users/danial.arab/Desktop/git-course/Moon$ git diff
+        diff --git a/file1.js b/file1.js
+        index c7bc16c..279399c 100644
+        --- a/file1.js
+        +++ b/file1.js
+        @@ -1,3 +1,4 @@
+        +hello world
+         hello
+         world
+         sky
+
+so in summary **git diff** gives me the unstaged changes and **git diff --staged** we can see the staged changes that are going into the next commit. Next, we use visual tools to easily compare files. 
+
+<a name="20"></a>
+### Visual Diff Tools
 
 ## 3. Branching
 
