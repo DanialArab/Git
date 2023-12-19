@@ -780,8 +780,8 @@ Comparing the files using the terminal is not the best way to do it, we quite of
 
 some points:
 + we are comparing two copies of the same file like a/file1.js b/file1.js
-+ the first copy a/file1.js is the old copy which we have in the last commit
-+ the second copy, the newer one, is what we currently have in the staging area
++ **the first copy a/file1.js is the old copy which we have in the last commit**
++ **the second copy, the newer one, is what we currently have in the staging area**
 + Below the files name we have some metadata: index 94954ab..c7bc16c 100644 which does not matter
 +  after that we have a legend:
       + changes in the old copy are indicated with a minus sign whereas changes in the new copy are indicated by the plus sign
@@ -805,6 +805,10 @@ so if i modify file1 and then run git diff again:
         (base) danial@LYVR-G6423233FB:/mnt/c/Users/danial.arab/Desktop/git-course/Moon$ git status -s
         MM file1.js
         A  file2.js
+        
+
+here for file1 we have some changes in the working directory that are not in the staging area.
+
         (base) danial@LYVR-G6423233FB:/mnt/c/Users/danial.arab/Desktop/git-course/Moon$ git diff
         diff --git a/file1.js b/file1.js
         index c7bc16c..279399c 100644
@@ -815,8 +819,10 @@ so if i modify file1 and then run git diff again:
          hello
          world
          sky
+         
+here **the old copy is what we currently have in the staging area** and **the new copy is what we have in the working directory**. 
 
-so in summary **git diff** gives me the unstaged changes and **git diff --staged** we can see the staged changes that are going into the next commit. Next, we use visual tools to easily compare files. 
+to recap **git diff** gives me the unstaged changes and using **git diff --staged** I can see the staged changes that are going into the next commit. Next, we use visual tools to easily compare files. 
 
 <a name="20"></a>
 ### Visual Diff Tools
