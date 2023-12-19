@@ -786,10 +786,10 @@ some points:
 +  after that we have a legend:
       + changes in the old copy are indicated with a minus sign whereas changes in the new copy are indicated by the plus sign
 + after that we have a header, @@ -1,2 +1,4 @@, with some information about what part of our files were changed:
-          + we have two segments one is prefixed with - sign giving us info about the old copy like what we had in the last snapshot and the other is prefixed with + sign containing info about the new copy and what we have in the staging area
+          we have two segments one is prefixed with - sign giving us info about the old copy like what we had in the last snapshot and the other is prefixed with + sign containing info about the new copy and what we have in the staging area
 + for file2 in the legend, we do not have the old copy, --- /dev/null, because it is an entirely new file and in the last commit we did not have a file called file2
 
-what if we want to see the changes in our working directory that are not staged yet? to do that we run git diff without any argument:
+what if we want to see the changes in our working directory that are not staged yet? to do that we run **git diff** without any argument:
 
         (base) danial@LYVR-G6423233FB:/mnt/c/Users/danial.arab/Desktop/git-course/Moon$ git diff
 
