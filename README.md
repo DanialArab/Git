@@ -756,7 +756,7 @@ now for file2 we have a green A in the left/staging area column, which represent
 <a name="19"></a>
 ### Viewing Staged and Unstaged Changes
 
-**Before committing our changes which are in the staging area we need to review our code.** We do not want to commit bad or broken code to our repository. So as the best practice, we always have to first review what we have in the staging area before making a commit. git status command only shows the files that have been affected but how we can see the exact lines of code that we have staged? using the diff command, which gives us what we have in the staging area that goes into the next commit: 
+**Before committing our changes which are in the staging area we need to review our code.** We do not want to commit bad or broken code to our repository. So as the best practice, we always have to first review what we have in the staging area before making a commit. git status command only shows the files that have been affected but how we can see the exact lines of code that we have staged? using the **git diff command**, which gives us what we have in the staging area that goes into the next commit: 
 
         (base) danial@LYVR-G6423233FB:/mnt/c/Users/danial.arab/Desktop/git-course/Moon$ git diff --staged
         diff --git a/file1.js b/file1.js
