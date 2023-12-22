@@ -25,6 +25,7 @@ This repository documents my understanding of Git. The followings are my notes f
     12. [Viewing Staged and Unstaged Changes](#19)
     13. [Visual Diff Tools](#20)
     14. [Viewing the History](#21)
+    15. [Viewing a Commit](@22)
 3. [Browsing History](#19)
     1. [Introduction](#20)
     2. [Getting a Repository](#21)
@@ -953,6 +954,9 @@ The log command has a few options one of them is online, which shows us the shor
 here we have unique identifiers that are shortened to 7 characters and we only have the oneline description. 
 
 The log command is very powerful and we will use it a lot. We talk about it in a separate section called "browsing history" to discuss various ways to get reports from the history. 
+
+<a name="22"></a>
+### Viewing a Commit
 
 ## 3. Branching
 
