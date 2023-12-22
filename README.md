@@ -827,6 +827,48 @@ to recap **git diff** gives me the unstaged changes and using **git diff --stage
 <a name="20"></a>
 ### Visual Diff Tools
 
+There are so many visual diff tools like:
++ KDiff3
++ P4Merge
++ WinMerge (Windows only)
++ VSCode
+
+We will be focusing on VSCode. 
+
+First, we have to tell Git we want to use VSCode as our default difftool through setting two config settings:
+
+        git config --global diff.tool vscode # Through this command we set vscode as our default diff tool 
+        git config --global difftool.vscode.cmd "code --wait --diff $LOCAL $REMOTE"  # through this cmd we tell Git how to launch vscode  
+        git config --global -e #as mentioned with this command we can edit our global config settings in our default editor  
+
+now back to the terminal instead of using git diff we can use git difftool for comparing files and exactly as before we do not supply any argument we see unstaged changes to compare what we have in the current working directory with what we have in the staging area. And if we want to looka t the staged changes ----> git difftool --staged (exactly the same way as we did with git diff command).
+
+        git difftool
+
+        Viewing (1/1): 'file1.js'
+        Launch 'vscode' [Y/n]? y
+
+which gives me back:
+
+![](https://github.com/DanialArab/images/blob/main/Git/difftool_unstaged.png)
+
+to see the staged changes:
+
+        git difftool --staged
+
+        Viewing (1/2): 'file1.js'
+        Launch 'vscode' [Y/n]?
+
+![](https://github.com/DanialArab/images/blob/main/Git/difftool_staged1.png)
+
+        Viewing (2/2): 'file2.js'
+        Launch 'vscode' [Y/n]? y
+
+![](https://github.com/DanialArab/images/blob/main/Git/difftool_staged2.png)
+
+We do not use difftool so much these days and just for the sake of completeness, it was covered here. These days most editors and IDEs allow us to view the staged and unstaged changes as part of our development environment, as will be discussed later. 
+
+
 ## 3. Branching
 
 ## 4. Collaboration
