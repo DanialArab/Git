@@ -25,7 +25,7 @@ This repository documents my understanding of Git. The followings are my notes f
     12. [Viewing Staged and Unstaged Changes](#19)
     13. [Visual Diff Tools](#20)
     14. [Viewing the History](#21)
-    15. [Viewing a Commit](@22)
+    15. [Viewing a Commit](#22)
 3. [Browsing History](#19)
     1. [Introduction](#20)
     2. [Getting a Repository](#21)
