@@ -24,6 +24,7 @@ This repository documents my understanding of Git. The followings are my notes f
     11. [Short Status](#18)
     12. [Viewing Staged and Unstaged Changes](#19)
     13. [Visual Diff Tools](#20)
+    14. [Viewing the History](#21)
 3. [Browsing History](#19)
     1. [Introduction](#20)
     2. [Getting a Repository](#21)
@@ -867,6 +868,10 @@ to see the staged changes:
 ![](https://github.com/DanialArab/images/blob/main/Git/difftool_staged2.png)
 
 We do not use difftool so much these days and just for the sake of completeness, it was covered here. These days most editors and IDEs allow us to view the staged and unstaged changes as part of our development environment, as will be discussed later. 
+
+<a name="21"></a>
+### Viewing the History
+
 
 
 ## 3. Branching
