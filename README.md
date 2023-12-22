@@ -872,7 +872,87 @@ We do not use difftool so much these days and just for the sake of completeness,
 <a name="21"></a>
 ### Viewing the History
 
+Where are the commits that we make? we can use the git log command to look at our history. 
 
+        (base) danial@LYVR-G6423233FB:/mnt/c/Users/danial.arab/Desktop/git-course/Moon$ git log
+        commit 3ad8ae60fe280865d8911158f3ebe1109c8bbd57 (HEAD -> master)
+        Author: Danial Arab <danial.arab@trulioo.com>
+        Date:   Fri Dec 15 15:37:09 2023 -0800
+        
+            Removed the bin directory that was accidentally commited
+        
+        commit 5eccbddb692c433653ff43e79d6e99ae6c6164f5
+        Author: Danial Arab <danial.arab@trulioo.com>
+        Date:   Fri Dec 15 15:22:07 2023 -0800
+        
+            Included bin/ in gitignore
+        
+        commit 66a60dc6e30be97b2e89322b0e1286c3ea9e49b1
+        Author: Danial Arab <danial.arab@trulioo.com>
+        Date:   Fri Dec 15 15:14:52 2023 -0800
+        
+            Added bin.
+        
+        commit 80fc387dd323809cac24d547f72fe5024673f477
+        Author: Danial Arab <danial.arab@trulioo.com>
+        Date:   Fri Dec 15 15:03:32 2023 -0800
+        
+            Add gitignore
+        :
+
+Here are all the commits we have created sorted from the latest to the earliest: the last commit is on top. To reverse the order:
+
+        (base) danial@LYVR-G6423233FB:/mnt/c/Users/danial.arab/Desktop/git-course/Moon$ git log --reverse
+        commit b663d4d8b8eda3a23b7e4bdee248cf5fd32cf2b8
+        Author: Danial Arab <danial.arab@trulioo.com>
+        Date:   Fri Dec 1 19:47:49 2023 -0800
+        
+            initial commit
+        
+        commit 61d84f54480f4cc441b5ad27f274388fa80942cc
+        Author: Danial Arab <danial.arab@trulioo.com>
+        Date:   Fri Dec 1 19:49:57 2023 -0800
+        
+            Fixed the bug in file1
+        
+        commit 48704fe45441dcb9a14d1016fbe14ad0bf939649
+        Author: Danial Arab <danial.arab@trulioo.com>
+        Date:   Fri Dec 1 19:53:51 2023 -0800
+        
+            Fixed the bug in file2.txt
+        
+        commit 281f44ccd4a22a91738261d877d097d80ab5f9fa
+        Author: Danial Arab <danial.arab@trulioo.com>
+        Date:   Fri Dec 1 19:57:14 2023 -0800
+        
+            Removed the unused code
+        :
+
+each commit has a unique identifier, which is a 40-character hexadecimal string that Git automatically generated for us. It is like a revision number but unlike a revision number does not increase. Next, we have (HEAD -> master): master is the main branch or the main line of work in Git (in some other version control system it is called trunk) in Git we can have multiple branches so we can work on multiple features or multiple bug fixes in parallel and then combine our code. We will discuss these concepts in detail later. HEAD is the reference to the current branch, this is how Git knows what branch we are currently working on. we also have the author's name and email, date, and oneline description. 
+
+we can press space to go to the next page and to quit we can press q.
+
+The log command has a few options one of them is online, which shows us the short summary of commits:
+
+        (base) danial@LYVR-G6423233FB:/mnt/c/Users/danial.arab/Desktop/git-course/Moon$ git log --oneline
+        3ad8ae6 (HEAD -> master) Removed the bin directory that was accidentally commited
+        5eccbdd Included bin/ in gitignore
+        66a60dc Added bin.
+        80fc387 Add gitignore
+        8a5b525 Refactored code
+        a7880a3 Removed main.js file
+        a1f287b Removed unused code
+        440c2bb Initial commit.
+        e5c4991 Refactored the code
+        0572ce4 Refactored the code
+        281f44c Removed the unused code
+        48704fe Fixed the bug in file2.txt
+        61d84f5 Fixed the bug in file1
+        b663d4d initial commit
+
+here we have unique identifiers that are shortened to 7 characters and we only have the oneline description. 
+
+The log command is very powerful and we will use it a lot. We talk about it in a separate section called "browsing history" to discuss various ways to get reports from the history. 
 
 ## 3. Branching
 
