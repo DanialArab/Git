@@ -26,6 +26,11 @@ This repository documents my understanding of Git. The followings are my notes f
     13. [Visual Diff Tools](#20)
     14. [Viewing the History](#21)
     15. [Viewing a Commit](#22)
+    16. [Unstaging Files](#23)
+    17. [Discarding Local Changes](#24)
+    18. [Restoring a File to an Earlier Version](#25)
+    19. [Creating Snapshots with VSCode](#26)
+    20. [Creating Snapshots with GitKraken](#27)
 3. [Browsing History](#19)
     1. [Introduction](#20)
     2. [Getting a Repository](#21)
@@ -958,6 +963,24 @@ The log command is very powerful and we will use it a lot. We talk about it in a
 <a name="22"></a>
 ### Viewing a Commit
 
+here 
+
+<a name="23"></a>
+### Unstaging Files
+
+<a name="24"></a>
+### Discarding Local Changes
+
+<a name="25"></a>
+### Restoring a File to an Earlier Version
+
+<a name="26"></a>
+### Creating Snapshots with VSCode
+
+<a name="27"></a>
+### Creating Snapshots with GitKraken
+
+    
 ## 3. Branching
 
 ## 4. Collaboration
