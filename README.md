@@ -980,12 +980,67 @@ here
 <a name="27"></a>
 ### Creating Snapshots with GitKraken
 
-    
-## 3. Branching
+<a name="28"></a>
+## Browsing History
 
-## 4. Collaboration
+<a name="29"></a>
+### Introduction
 
-## 5. Rewriting History
+<a name="30"></a>
+### Getting a Repository
+
+<a name="31"></a>
+### Viewing the History
+
+<a name="32"></a>
+### Filtering the History
+
+<a name="33"></a>
+### Formatting the Log Output
+
+<a name="34"></a>
+### Aliases
+
+<a name="35"></a>
+### Viewing a Commit
+
+<a name="36"></a>
+### Viewing the Changes Across Commits
+
+<a name="37"></a>
+### Checking Out a Commit
+
+<a name="38"></a>
+### Finding Bugs Using Bisect
+
+<a name="39"></a>
+### Finding Contributors Using Shortlog
+
+<a name="40"></a>
+### Viewing the History of a File
+
+<a name="41"></a>
+### Restoring a Deleting File
+
+<a name="42"></a>
+### Finding the Author of Line Using Blame
+
+<a name="43"></a>
+### Tagging
+
+<a name="44"></a>
+### Browsing History Using VSCode
+
+<a name="45"></a>
+### Browsing the History Using GitKraken
+
+<a name="46"></a>
+## Branching
+
+
+## Collaboration
+
+## Rewriting History
 
 
 ## 6. Git Cheat Sheet
