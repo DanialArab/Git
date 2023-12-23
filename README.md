@@ -963,8 +963,115 @@ The log command is very powerful and we will use it a lot. We talk about it in a
 <a name="22"></a>
 ### Viewing a Commit
 
-here 
+ There are two ways to reference a commit:
+ + using its unique identifier
 
+        (base) danial@LYVR-G6423233FB:/mnt/c/Users/danial.arab/Desktop/git-course/Moon$ git log --oneline
+        3ad8ae6 (HEAD -> master) Removed the bin directory that was accidentally commited
+        5eccbdd Included bin/ in gitignore
+        66a60dc Added bin.
+        80fc387 Add gitignore
+        8a5b525 Refactored code
+        a7880a3 Removed main.js file
+        a1f287b Removed unused code
+        440c2bb Initial commit.
+        e5c4991 Refactored the code
+        0572ce4 Refactored the code
+        281f44c Removed the unused code
+        48704fe Fixed the bug in file2.txt
+        61d84f5 Fixed the bug in file1
+        b663d4d initial commit
+        (base) danial@LYVR-G6423233FB:/mnt/c/Users/danial.arab/Desktop/git-course/Moon$ git show 66a60dc
+        commit 66a60dc6e30be97b2e89322b0e1286c3ea9e49b1
+        Author: Danial Arab <danial.arab@trulioo.com>
+        Date:   Fri Dec 15 15:14:52 2023 -0800
+        
+            Added bin.
+        
+        diff --git a/bin/app.bin b/bin/app.bin
+        new file mode 100644
+        index 0000000..ce01362
+        --- /dev/null
+        +++ b/bin/app.bin
+        @@ -0,0 +1 @@
+        +hello
+
+ + using a HEAD pointer: as shown in the output of git log --oneline above the HEAD pointer is in front of the last commit so to view the last commit:
+
+        (base) danial@LYVR-G6423233FB:/mnt/c/Users/danial.arab/Desktop/git-course/Moon$ git show HEAD
+        commit 3ad8ae60fe280865d8911158f3ebe1109c8bbd57 (HEAD -> master)
+        Author: Danial Arab <danial.arab@trulioo.com>
+        Date:   Fri Dec 15 15:37:09 2023 -0800
+        
+            Removed the bin directory that was accidentally commited
+        
+        diff --git a/bin/app.bin b/bin/app.bin
+        deleted file mode 100644
+        index ce01362..0000000
+        --- a/bin/app.bin
+        +++ /dev/null
+        @@ -1 +0,0 @@
+        -hello
+
+To view the previous commits, we have to use ~ after HEAD and then specify how many steps we want to go back:
+
+        (base) danial@LYVR-G6423233FB:/mnt/c/Users/danial.arab/Desktop/git-course/Moon$ git show HEAD~1
+        commit 5eccbddb692c433653ff43e79d6e99ae6c6164f5
+        Author: Danial Arab <danial.arab@trulioo.com>
+        Date:   Fri Dec 15 15:22:07 2023 -0800
+        
+            Included bin/ in gitignore
+        
+        diff --git a/.gitignore b/.gitignore
+        index 8432ad3..1dcc30c 100644
+        --- a/.gitignore
+        +++ b/.gitignore
+        @@ -1,3 +1,4 @@
+         logs/
+         main.log
+        -*.log
+        \ No newline at end of file
+        +*.log
+        +bin/
+        \ No newline at end of file
+
+if we want to see the exact final version that is stored in the commit and not the differences, like what we have in the .gitignore:
+
+        (base) danial@LYVR-G6423233FB:/mnt/c/Users/danial.arab/Desktop/git-course/Moon$ git s
+        how HEAD~1:.gitignore
+        logs/
+        main.log
+        *.log
+        bin/
+
+each commit contains a complete snapshot of our working directory and NOT just changes but when we run the show command we only see the differences i.e., what is chaneged, what if we want to see all the files and directories in a commit? using git ls-tree command:
+
+tree is a data structure to represent hierarchical information, in trees we have nodes and nodes can have children. A directory in a file system can be represented using a tree and children can files or other subdirectories. 
+
+        (base) danial@LYVR-G6423233FB:/mnt/c/Users/danial.arab/Desktop/git-course/Moon$ git ls-tree HEAD~1
+        100644 blob 1dcc30c4cd47f8915741af2cfef91e16e0dc7d89    .gitignore
+        040000 tree 64629cd51ef4a65a9d9cb9e656e1f46e07e1357f    bin
+        100644 blob 94954abda49de8615a048f8d2e64b5de848e27a1    file1.js
+
+these are all files and directories stored in this commit. Each file or directory has a unique identifier that is generated based on the content of the files. So in the Git database, we have objects with these IDs. As shown above, each object has a type: files are represented using blobs and directories are represented using trees. All of these are objects that are stored in the Git database. And using the show command we can easily view an object in the Git database. 
+
+        (base) danial@LYVR-G6423233FB:/mnt/c/Users/danial.arab/Desktop/git-course/Moon$ git ls-tree HEAD~1
+        100644 blob 1dcc30c4cd47f8915741af2cfef91e16e0dc7d89    .gitignore
+        040000 tree 64629cd51ef4a65a9d9cb9e656e1f46e07e1357f    bin
+        100644 blob 94954abda49de8615a048f8d2e64b5de848e27a1    file1.js
+        (base) danial@LYVR-G6423233FB:/mnt/c/Users/danial.arab/Desktop/git-course/Moon$ git show 1dcc
+        logs/
+        main.log
+        *.log
+        bin/
+
+So using the show commands we can se the objects in the Git database, hese objects can be:
++ commits
++ blobs (files)
++ trees (directories)
++ tags, will be discussed later
+
+  
 <a name="23"></a>
 ### Unstaging Files
 
