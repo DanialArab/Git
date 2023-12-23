@@ -1085,6 +1085,37 @@ these are all files and directories stored in this commit. Each file or director
 <a name="23"></a>
 ### Unstaging Files
 
+We should always review the stuff we have in the staging area before making a commit. 
+
+        (base) danial@LYVR-G6423233FB:/mnt/c/Users/danial.arab/Desktop/git-course/Moon$ git status -s
+        MM file1.js
+        A  file2.js
+
+if we decide that what we have for file1.js should not go to the next commit we have to un-stage them (undo the add operation we did before): we use **git restore** command to restore files in different environments like in the working directory or in the staging area. 
+
+to restore file1 in the staging area:
+
+        git restore --staged file1.js # we can have multiple files or patterns like *.js or just a period to restore everything in the staging area 
+
+so
+
+        (base) danial@LYVR-G6423233FB:/mnt/c/Users/danial.arab/Desktop/git-course/Moon$ git restore --staged file1.js
+        (base) danial@LYVR-G6423233FB:/mnt/c/Users/danial.arab/Desktop/git-course/Moon$ git status -s
+         M file1.js
+        A  file2.js
+
+now all the changes we had for file1.js in the staging area are now in the working directory. It is essential to understand how the restore command works: restore command takes the copy from the next environment in the case of the staging environment the next environment would be the last commit what we have in the repository so when we restore file1 in the staging area Git took the last copy of this file from the last snapshot and put it in the staging area.
+
+Now for file2, because we have A for it, it means that it is a new file, so we have this new file in the staging area but this file does not exist in the last commit. So when we restore this file because we do not have a copy of this file in our repository or in our last commit Git will remove this file from the staging area and takes it back to its previous state which is a new untracked file:
+
+        (base) danial@LYVR-G6423233FB:/mnt/c/Users/danial.arab/Desktop/git-course/Moon$ git status -s
+         M file1.js
+        A  file2.js
+        (base) danial@LYVR-G6423233FB:/mnt/c/Users/danial.arab/Desktop/git-course/Moon$ git restore --staged file2.js
+        (base) danial@LYVR-G6423233FB:/mnt/c/Users/danial.arab/Desktop/git-course/Moon$ git status -s
+         M file1.js
+        ?? file2.js
+
 
 <a name="24"></a>
 ### Discarding Local Changes
