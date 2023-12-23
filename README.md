@@ -1038,7 +1038,7 @@ To view the previous commits, we have to use ~ after HEAD and then specify how m
         +bin/
         \ No newline at end of file
 
-if we want to see the exact final version that is stored in the commit and not the differences, like what we have in the .gitignore:
+if we want to see the exact final version that is stored in the commit and not the differences: we need to provide the full path to the file after the colon like git show HEAD~1: .gitignore or if the file is in  a subdirectory we have to do git show HEAD~1: bin/app.bin
 
         (base) danial@LYVR-G6423233FB:/mnt/c/Users/danial.arab/Desktop/git-course/Moon$ git s
         how HEAD~1:.gitignore
