@@ -1065,7 +1065,8 @@ these are all files and directories stored in this commit. Each file or director
         *.log
         bin/
 
-So using the show commands we can se the objects in the Git database, hese objects can be:
+So using the show commands we can see the objects in the Git database, these objects can be:
+
 + commits
 + blobs (files)
 + trees (directories)
