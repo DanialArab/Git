@@ -1104,7 +1104,7 @@ so
          M file1.js
         A  file2.js
 
-now all the changes we had for file1.js in the staging area are now in the working directory. It is essential to understand how the restore command works: restore command takes the copy from the next environment in the case of the staging environment the next environment would be the last commit what we have in the repository so when we restore file1 in the staging area Git took the last copy of this file from the last snapshot and put it in the staging area.
+now all the changes we had for file1.js in the staging area are now in the working directory. It is essential to understand how the restore command works: **restore command takes the copy from the next (I think before would be the better term) environment: in the case of the staging environment the next environment would be the last commit what we have in the repository so when we restore file1 in the staging area Git took the last copy of this file from the last snapshot and put it in the staging area.**
 
 Now for file2, because we have A for it, it means that it is a new file, so we have this new file in the staging area but this file does not exist in the last commit. So when we restore this file because we do not have a copy of this file in our repository or in our last commit Git will remove this file from the staging area and takes it back to its previous state which is a new untracked file:
 
