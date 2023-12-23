@@ -1120,6 +1120,41 @@ Now for file2, because we have A for it, it means that it is a new file, so we h
 <a name="24"></a>
 ### Discarding Local Changes
 
+There are times that we have some codes in our working directory that we want to throw away, we can discard local changes using git restore:
+
+        (base) danial@LYVR-G6423233FB:/mnt/c/Users/danial.arab/Desktop/git-course/Moon$ git restore .
+        (base) danial@LYVR-G6423233FB:/mnt/c/Users/danial.arab/Desktop/git-course/Moon$ git status -s
+        ?? file2.js
+
+as seen file2 is still there, it is because file2 is a new untracked file so Git has not been tracking it, when we tell Git to restore this file Git does not know where to get the previous version of this file, it does not exist in our staging environment or in our repository so to remove all new untracked files we need to use git clean command:
+
+        (base) danial@LYVR-G6423233FB:/mnt/c/Users/danial.arab/Desktop/git-course/Moon$ git clean
+        fatal: clean.requireForce defaults to true and neither -i, -n, nor -f given; refusing to clean
+
+we got the fatal error with which Git warns me that this is a dangerous operation and if you accidentally remove the untracked file there would be no way to recover them. 
+
+        (base) danial@LYVR-G6423233FB:/mnt/c/Users/danial.arab/Desktop/git-course/Moon$ git clean -h
+        usage: git clean [-d] [-f] [-i] [-n] [-q] [-e <pattern>] [-x | -X] [--] <paths>...
+        
+            -q, --quiet           do not print names of files removed
+            -n, --dry-run         dry run
+            -f, --force           force
+            -i, --interactive     interactive cleaning
+            -d                    remove whole directories
+            -e, --exclude <pattern>
+                                  add <pattern> to ignore rules
+            -x                    remove ignored files, too
+            -X                    remove only ignored files
+
+quite often we do git clean -fd 
+
+
+        (base) danial@LYVR-G6423233FB:/mnt/c/Users/danial.arab/Desktop/git-course/Moon$ git clean -fd
+        Removing file2.js
+        (base) danial@LYVR-G6423233FB:/mnt/c/Users/danial.arab/Desktop/git-course/Moon$ git status -s
+
+now file2 is gone and this is how we undo local changes. 
+
 <a name="25"></a>
 ### Restoring a File to an Earlier Version
 
