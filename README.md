@@ -1074,16 +1074,17 @@ these are all files and directories stored in this commit. Each file or director
         *.log
         bin/
 
-So using the show commands we can see the objects in the Git database, these objects can be:
+**So using the show commands we can see the objects in the Git database, these objects can be:**
 
-+ commits
-+ blobs (files)
-+ trees (directories)
-+ tags, will be discussed later
++ **commits**
++ **blobs (files)**
++ **trees (directories)**
++ **tags, will be discussed later**
 
   
 <a name="23"></a>
 ### Unstaging Files
+
 
 <a name="24"></a>
 ### Discarding Local Changes
