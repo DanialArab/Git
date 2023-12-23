@@ -1055,9 +1055,7 @@ so:
         *.log
         bin/
 
-each commit contains a complete snapshot of our working directory and NOT just changes but when we run the show command we only see the differences i.e., what is chaneged, what if we want to see all the files and directories in a commit? using git ls-tree command:
-
-tree is a data structure to represent hierarchical information, in trees we have nodes and nodes can have children. A directory in a file system can be represented using a tree and children can be files or other subdirectories. 
+each commit contains a complete snapshot of our working directory and NOT just changes but **when we run the show command we only see the differences i.e., what is changed**, what if we want to see all the files and directories in a commit? using **git ls-tree** command: a tree is a data structure to represent hierarchical information, in trees we have nodes and nodes can have children. A directory in a file system can be represented using a tree and children can be files or other subdirectories. 
 
         (base) danial@LYVR-G6423233FB:/mnt/c/Users/danial.arab/Desktop/git-course/Moon$ git ls-tree HEAD~1
         100644 blob 1dcc30c4cd47f8915741af2cfef91e16e0dc7d89    .gitignore
