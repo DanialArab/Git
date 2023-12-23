@@ -1120,6 +1120,10 @@ Now for file2, because we have A for it, it means that it is a new file, so we h
 <a name="24"></a>
 ### Discarding Local Changes
 
+        (base) danial@LYVR-G6423233FB:/mnt/c/Users/danial.arab/Desktop/git-course/Moon$ git status -s
+         M file1.js
+        ?? file2.js
+
 There are times that we have some codes in our working directory that we want to throw away, we can discard local changes using git restore:
 
         (base) danial@LYVR-G6423233FB:/mnt/c/Users/danial.arab/Desktop/git-course/Moon$ git restore .
