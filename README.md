@@ -224,7 +224,7 @@ Some points on how to initialize a git repo:
 
 + To open a .git: in the Git Bash terminal I need to type explorer .git and press enter (in my ubuntu/wsl it would be explorer.exe .git), the files/folders that I find there in my git directory or repository are **config, HEAD, hooks, info, etc.** this is where Git stores information about my project’s history, I do NOT need to understand these details and structures because these are purely implementation details. It is how Git stores information it is none of our business:) That is why this .git directory is hidden so that we don’t touch it. If we corrupt or remove this directory we will lose our project’s history. 
 
-+ In windows I can install posh-git to make thing pretty, it is completely optional.
++ In Windows I can install posh-git to make thing pretty, it is completely optional. For my ubuntu/wsl I installed zsh. 
 
 <a name="10"></a>
 ### Git Workflow
