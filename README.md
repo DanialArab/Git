@@ -963,7 +963,10 @@ The log command is very powerful and we will use it a lot. We talk about it in a
 <a name="22"></a>
 ### Viewing a Commit
 
+If we want to see what exactly has been changed in a given commit we use the show command:
+
  There are two ways to reference a commit:
+ 
  + using its unique identifier
 
         (base) danial@LYVR-G6423233FB:/mnt/c/Users/danial.arab/Desktop/git-course/Moon$ git log --oneline
