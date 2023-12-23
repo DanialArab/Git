@@ -1162,6 +1162,8 @@ now file2 is gone and this is how we undo local changes.
 <a name="25"></a>
 ### Restoring a File to an Earlier Version
 
+here 
+
 <a name="26"></a>
 ### Creating Snapshots with VSCode
 
