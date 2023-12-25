@@ -1342,9 +1342,6 @@ Now let's make a new commit, GitKraken is just a GUI tool and it is not a code e
 
 now here we can easily stage the changes and make a commit. So as simple as that we can create a snapshot of our project using GitKraken. 
 
-
-
-
 <a name="28"></a>
 ## Browsing History
 
@@ -1402,6 +1399,7 @@ now here we can easily stage the changes and make a commit. So as simple as that
 <a name="46"></a>
 ## Branching
 
+here
 
 ## Collaboration
 
