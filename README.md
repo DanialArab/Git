@@ -1234,6 +1234,56 @@ now file2 is gone and this is how we undo local changes.
          1 file changed, 2 deletions(-)
          delete mode 100644 file1.js
  
+in this case we have two ways: first, we can undo/revert the last commit, will be discussed later. Or we can restore a file to a previous version:
+
+        danial@LYVR-G6423233FB  /mnt/c/Users/danial.arab/Desktop/git-course/Moon   master  git log --oneline
+        2b197b9 (HEAD -> master) Deleted file1.js
+        3ad8ae6 Removed the bin directory that was accidentally commited
+        5eccbdd Included bin/ in gitignore
+        66a60dc Added bin.
+        80fc387 Add gitignore
+        8a5b525 Refactored code
+        a7880a3 Removed main.js file
+        a1f287b Removed unused code
+        440c2bb Initial commit.
+        e5c4991 Refactored the code
+        0572ce4 Refactored the code
+        281f44c Removed the unused code
+        48704fe Fixed the bug in file2.txt
+        61d84f5 Fixed the bug in file1
+        b663d4d initial commit
+        (END)
+
+so we want to restore file1 to the commit before the last commit i.e., commit with ID of 3ad8ae6. 
+
+        danial@LYVR-G6423233FB  /mnt/c/Users/danial.arab/Desktop/git-course/Moon   master  git restore -h
+        usage: git restore [<options>] [--source=<branch>] <file>...
+        
+            -s, --source <tree-ish>
+                                  which tree-ish to checkout from
+            -S, --staged          restore the index
+            -W, --worktree        restore the working tree (default)
+            --ignore-unmerged     ignore unmerged entries
+            --overlay             use overlay mode
+            -q, --quiet           suppress progress reporting
+            --recurse-submodules[=<checkout>]
+                                  control recursive updating of submodules
+            --progress            force progress reporting
+            -m, --merge           perform a 3-way merge with the new branch
+            --conflict <style>    conflict style (merge or diff3)
+            -2, --ours            checkout our version for unmerged files
+            -3, --theirs          checkout their version for unmerged files
+            -p, --patch           select hunks interactively
+            --ignore-skip-worktree-bits
+                                  do not limit pathspecs to sparse entries only
+            --pathspec-from-file <file>
+                                  read pathspec from file
+            --pathspec-file-nul   with --pathspec-from-file, pathspec elements are separated with NUL character
+
+as shown git restore gets three types of arguments: we can supply a bunch of options, we can supply a source by default Git restores the file from the next environment or next area like if the file that we want to restore is in the working directory Git restores it from the staging area and if the file is int he staging area Git will restore it from the last snapshot or the last commit. In our case we want to change the default behavior: we want to restore a file from the commit before the last one:
+
+        
+
 
 <a name="26"></a>
 ### Creating Snapshots with VSCode
