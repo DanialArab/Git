@@ -1299,6 +1299,12 @@ we can simply stage our files using a plus icon, and also we can unstage them us
 
 ![](https://github.com/DanialArab/images/blob/main/Git/staging%20in%20VS%20Code.png)
 
+after reviewing our file we can provide a message and make a commit. Then back to the Explorer panel after clicking on the file and then clicking on the timeline on the bottom left we can see all the commits applied to this file:
+
+![](https://github.com/DanialArab/images/blob/main/Git/timeline%20in%20vscode.png)
+
+we can click on each commit and see the changes. 
+
 
 <a name="27"></a>
 ### Creating Snapshots with GitKraken
