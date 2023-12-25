@@ -1288,9 +1288,16 @@ as shown git restore gets three types of arguments: we can supply a bunch of opt
 
 now we have a new untracked file. 
 
-
 <a name="26"></a>
 ### Creating Snapshots with VSCode
+
+In VS Code on the left side, I have the source control panel where we can see all the changes in our project. What we see here is similar to the output of the status command: 
+
+![](https://github.com/DanialArab/images/blob/main/Git/source%20control%20in%20vs%20code.png)
+
+we can simply stage our files using a plus icon, and also we can unstage them using the minus icon:
+
+![](https://github.com/DanialArab/images/blob/main/Git/staging%20in%20VS%20Code.png)
 
 
 <a name="27"></a>
