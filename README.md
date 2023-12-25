@@ -1319,7 +1319,7 @@ if we have changed multiple files in different folders, tree view is very helpfu
 ![](https://github.com/DanialArab/images/blob/main/Git/GitKraken%202.png)
 
 in the "Diff View" we have different ways to compare changes: 
-+ Hunk view: if we are dealing with large file with a bunch of changes from parts of this file Hunk view is an easy way to see the changes
++ Hunk view: if we are dealing with a large file with a bunch of changes in different parts of this file Hunk view is an easy way to see the changes in each section 
 + Inline view: it is exactly the same as what we get in the terminal
 + Split view: which gives us the before and after code
 
@@ -1334,7 +1334,16 @@ Inline view:
 Hunk view:
 
 ![](https://github.com/DanialArab/images/blob/main/Git/hunk%20view.png)
-GitKraken is just a GUI tool and it is not a code editor so we need to go to VS Code to make any change to our code.
+
+Now let's make a new commit, GitKraken is just a GUI tool and it is not a code editor so we need to go to VS Code to make any change to our code. Then back to the GitKraken, we have a notification on having a change then after clicking on the "view change":
+
+![](https://github.com/DanialArab/images/blob/main/Git/GitKraken%203.png)
+
+
+now here we can easily stage the changes and make a commit. So as simple as that we can create a snapshot of our project using GitKraken. 
+
+
+
 
 <a name="28"></a>
 ## Browsing History
