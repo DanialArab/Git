@@ -1280,13 +1280,18 @@ so we want to restore file1 to the commit before the last commit i.e., commit wi
                                   read pathspec from file
             --pathspec-file-nul   with --pathspec-from-file, pathspec elements are separated with NUL character
 
-as shown git restore gets three types of arguments: we can supply a bunch of options, we can supply a source by default Git restores the file from the next environment or next area like if the file that we want to restore is in the working directory Git restores it from the staging area and if the file is int he staging area Git will restore it from the last snapshot or the last commit. In our case we want to change the default behavior: we want to restore a file from the commit before the last one:
+as shown git restore gets three types of arguments: we can supply a bunch of options, we can supply a source by default Git restores the file from the next environment or next area like if the file that we want to restore is in the working directory Git restores it from the staging area and if the file is in the staging area Git will restore it from the last snapshot or the last commit. In our case we want to change the default behavior: we want to restore a file from the commit before the last one:
 
-        
+         ✘ danial@LYVR-G6423233FB  /mnt/c/Users/danial.arab/Desktop/git-course/Moon   master  git restore --source=HEAD~1 file1.js # then we specify the full path to the file 
+         danial@LYVR-G6423233FB  /mnt/c/Users/danial.arab/Desktop/git-course/Moon   master  git status -s
+        ?? file1.js
+
+now we have a new untracked file. 
 
 
 <a name="26"></a>
 ### Creating Snapshots with VSCode
+
 
 <a name="27"></a>
 ### Creating Snapshots with GitKraken
