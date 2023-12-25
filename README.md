@@ -1312,6 +1312,9 @@ here by default, we don't have a way to look at the history, and to do that we n
 <a name="27"></a>
 ### Creating Snapshots with GitKraken
 
+![](https://github.com/DanialArab/images/blob/main/Git/GitKraken.png)
+
+GitKraken is just a GUI tool and it is not a code editor so we need to go to VS Code to make any change to our code.
 
 <a name="28"></a>
 ## Browsing History
