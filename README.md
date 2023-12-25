@@ -1314,6 +1314,26 @@ here by default, we don't have a way to look at the history, and to do that we n
 
 ![](https://github.com/DanialArab/images/blob/main/Git/GitKraken.png)
 
+if we have changed multiple files in different folders, tree view is very helpful. We can also select "View all files" to see all the files in our project at this point and time, if we unchecked this we can only see the changed files and by change here we mean additions, modifications, and deletion. 
+
+![](https://github.com/DanialArab/images/blob/main/Git/GitKraken%202.png)
+
+in the "Diff View" we have different ways to compare changes: 
++ Hunk view: if we are dealing with large file with a bunch of changes from parts of this file Hunk view is an easy way to see the changes
++ Inline view: it is exactly the same as what we get in the terminal
++ Split view: which gives us the before and after code
+
+Split view:
+
+![](https://github.com/DanialArab/images/blob/main/Git/split%20view.png)
+
+Inline view:
+
+![](https://github.com/DanialArab/images/blob/main/Git/inline%20view.png)
+
+Hunk view:
+
+![](https://github.com/DanialArab/images/blob/main/Git/hunk%20view.png)
 GitKraken is just a GUI tool and it is not a code editor so we need to go to VS Code to make any change to our code.
 
 <a name="28"></a>
