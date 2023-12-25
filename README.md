@@ -1307,8 +1307,11 @@ we can click on each commit and see the changes.
 
 ![](https://github.com/DanialArab/images/blob/main/Git/timeline%20in%20vscode%202.png)
 
+here by default, we don't have a way to look at the history, and to do that we need to install a plugin, which will be discussed later in the next section. 
+
 <a name="27"></a>
 ### Creating Snapshots with GitKraken
+
 
 <a name="28"></a>
 ## Browsing History
