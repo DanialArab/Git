@@ -1305,6 +1305,7 @@ after reviewing our file we can provide a message and make a commit. Then back t
 
 we can click on each commit and see the changes. 
 
+![](https://github.com/DanialArab/images/blob/main/Git/timeline%20in%20vscode%202.png)
 
 <a name="27"></a>
 ### Creating Snapshots with GitKraken
