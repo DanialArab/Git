@@ -1221,7 +1221,19 @@ now file2 is gone and this is how we undo local changes.
 <a name="25"></a>
 ### Restoring a File to an Earlier Version
 
-here 
+ Once Git tracks a file it stores every version of that file in its database so if we screw things up we can always restore a file or directory to a previous version. So let's delete a file deliberately and then restore it:
+
+        danial@LYVR-G6423233FB  /mnt/c/Users/danial.arab/Desktop/git-course/Moon   master  ls
+        bin  file1.js  logs
+         danial@LYVR-G6423233FB  /mnt/c/Users/danial.arab/Desktop/git-course/Moon   master  git rm file1.js
+        rm 'file1.js'
+         danial@LYVR-G6423233FB  /mnt/c/Users/danial.arab/Desktop/git-course/Moon   master ✚  git status -s
+        D  file1.js
+         danial@LYVR-G6423233FB  /mnt/c/Users/danial.arab/Desktop/git-course/Moon   master ✚  git commit -m"Deleted file1.js"
+        [master 2b197b9] Deleted file1.js
+         1 file changed, 2 deletions(-)
+         delete mode 100644 file1.js
+ 
 
 <a name="26"></a>
 ### Creating Snapshots with VSCode
