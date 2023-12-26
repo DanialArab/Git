@@ -1899,7 +1899,6 @@ How does Git know which branch we are currently working on? Using a special poin
 
 ![](https://github.com/DanialArab/images/blob/main/Git/git%20image%204.png)
 
-
 this pointer is also another tiny file that contains the name of the branch like master when we switch to a different branch Git moves the HEAD pointer around:
 
 ![](https://github.com/DanialArab/images/blob/main/Git/git%20image%205.png)
@@ -1909,10 +1908,61 @@ so it updates the tiny file and writes the name of the target branch. This is ho
 <a name="49"></a>
 ### Getting a Repository
 
-here 
+we will work using the same repo as we worked with in the previous section, i.e., Venus.
 
 <a name="50"></a>
 ### Working with Branches
+
+Let's say we got a bug report, to fix this bug, first we should create a new branch called let's say bugfix:
+
+to see thelist of branches in the current repo:
+
+        danial@LYVR-G6423233FB  /mnt/c/Users/danial.arab/Desktop/git-course/Venus   master ±  git branch
+         
+        * master
+        (END)
+
+to create a new branch:
+
+        danial@LYVR-G6423233FB  /mnt/c/Users/danial.arab/Desktop/git-course/Venus   master ±  git branch bugfix
+
+        danial@LYVR-G6423233FB  /mnt/c/Users/danial.arab/Desktop/git-course/Venus   master ±  git branch
+         
+          bugfix
+        * master
+        (END)
+
+the asterisk before master branch indicates that we are currently in the master branch. This is also clear in my zsh. This is very helpful because one of the issues a lot of p[people struggle with is to accidentally commit their code into the wrong branch. Another way to see the current branch is through the command git status:
+
+        danial@LYVR-G6423233FB  /mnt/c/Users/danial.arab/Desktop/git-course/Venus   master ±  git status
+        On branch master
+        Changes not staged for commit:
+          (use "git add <file>..." to update what will be committed)
+          (use "git restore <file>..." to discard changes in working directory)
+                modified:   audience.txt
+                modified:   objectives.txt
+                modified:   sales-page.txt
+                modified:   sections/creating-snapshots/init.txt
+                modified:   sections/creating-snapshots/staging-changes.txt
+                modified:   toc.txt
+        
+        no changes added to commit (use "git add" and/or "git commit -a")
+
+So to fix this imaginary bug we first need to change the current branch to bugfix. There are two ways to do this:
++ in the past we used the checkout command but this command had multiple applications which were confusing and so these days we use
++ the new command git switch:
+
+        danial@LYVR-G6423233FB  /mnt/c/Users/danial.arab/Desktop/git-course/Venus   master ±  git switch bugfix
+        M       audience.txt
+        M       objectives.txt
+        M       sales-page.txt
+        M       sections/creating-snapshots/init.txt
+        M       sections/creating-snapshots/staging-changes.txt
+        M       toc.txt
+        Switched to branch 'bugfix'
+
+
+. The new branch will start with the same code as the branch you were on when you created it
 
 <a name="51"></a>
 ### Comparing Branches
