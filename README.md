@@ -1348,8 +1348,19 @@ now here we can easily stage the changes and make a commit. So as simple as that
 <a name="29"></a>
 ### Introduction
 
+We look at various ways to browse the history of our project. We will learn:
+
++ Search for commits (by author, date, message, etc.)
++ view a commit
++ restore our project to an earlier point
++ compare commits
++ view the history of a file
++ find a bad commit that introduced a bug
+
+
 <a name="30"></a>
 ### Getting a Repository
+
 
 <a name="31"></a>
 ### Viewing the History
