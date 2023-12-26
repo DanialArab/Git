@@ -1678,7 +1678,49 @@ we can also filter the history by a range of commits: we need to have double per
         fa1b75e Include the warning about removing .git directory.
         dad47ed Write the first draft of initializing a repo.
         (END)
+
+what if we want to find all the commits that touch a particular file or bunch of files, like to find all the commits that have modified the toc.txt file:
+
+        danial@LYVR-G6423233FB  /mnt/c/Users/danial.arab/Desktop/git-course/Venus   master ±  git log --oneline toc.txt
         
+        a642e12 (HEAD -> master) Add header to all pages.
+        50db987 Include the first section in TOC.
+        ca49180 Initial commit.
+        (END)
+
+sometimes based on the name of the file, Git may complain and say hey this name is ambiguous, in those cases, we have to separate the file name from the options like --oneline, to do so, we use double hyphens to separate the file name from the options we use, i.e., --oneline in the following example:
+
+
+        danial@LYVR-G6423233FB  /mnt/c/Users/danial.arab/Desktop/git-course/Venus   master ±  git log --oneline -- toc.txt
+
+
+note: we only need to use this -- only if Git complains about the file name and its ambiguity. 
+
+if we want to see the actual changes n each of these commits, once again we can use the patch option **however, the patch option should be listed before the file name**. Because if we put it after the file name Git interprets it as a file name
+
+        danial@LYVR-G6423233FB  /mnt/c/Users/danial.arab/Desktop/git-course/Venus   master ±  git log --oneline --patch -- toc.txt
+        
+        
+        a642e12 (HEAD -> master) Add header to all pages.
+        diff --git a/toc.txt b/toc.txt
+        index d019492..cc0798f 100644
+        --- a/toc.txt
+        +++ b/toc.txt
+        @@ -1,5 +1,5 @@
+         TABLE OF CONTENT
+        -================
+        +
+         Creating Snapshots
+           - Initializing a repository
+           - Staging changes
+        \ No newline at end of file
+        50db987 Include the first section in TOC.
+        diff --git a/toc.txt b/toc.txt
+        index 8b13789..d019492 100644
+        --- a/toc.txt
+        :
+
+
 <a name="33"></a>
 ### Formatting the Log Output
 
