@@ -1783,8 +1783,44 @@ since it is too verbose we can use the lower case h to see the abbreviation:
 the complete list of these placeholders can be found here **<a href="https://git-scm.com/docs/git-log
 ">Git log documentation</a>**
 
+        danial@LYVR-G6423233FB  /mnt/c/Users/danial.arab/Desktop/git-course/Venus   master ±  git log --pretty=format:"%an committed %h
+         on %cd"
+        
+         Moshfegh Hamedani committed a642e12 on Tue Aug 18 09:23:19 2020 -0700
+        Moshfegh Hamedani committed 50db987 on Mon Aug 17 14:27:50 2020 -0700
+        Moshfegh Hamedani committed 555b62e on Mon Aug 17 14:26:49 2020 -0700
+        Moshfegh Hamedani committed 91f7d40 on Mon Aug 17 14:25:43 2020 -0700
+        Moshfegh Hamedani committed edb3594 on Mon Aug 17 14:24:38 2020 -0700
+        Moshfegh Hamedani committed 24e86ee on Mon Aug 17 14:23:52 2020 -0700
+        Moshfegh Hamedani committed 36cd6db on Mon Aug 17 14:22:51 2020 -0700
+        Moshfegh Hamedani committed 9b6ebfd on Mon Aug 17 14:22:17 2020 -0700
+        Moshfegh Hamedani committed fa1b75e on Mon Aug 17 14:21:30 2020 -0700
+        Moshfegh Hamedani committed dad47ed on Mon Aug 17 14:20:50 2020 -0700
+        Moshfegh Hamedani committed fb0d184 on Mon Aug 17 14:18:09 2020 -0700
+        Moshfegh Hamedani committed 1ebb7a7 on Mon Aug 17 14:17:31 2020 -0700
+        Moshfegh Hamedani committed ca49180 on Mon Aug 17 14:17:15 2020 -0700
 
+we can also colorize this output like we can display the author name in green: 
 
+        danial@LYVR-G6423233FB  /mnt/c/Users/danial.arab/Desktop/git-course/Venus   master ±  git log --pretty=format:"%Cgreen%an%Creset committed %h on %cd"
+        
+        Moshfegh Hamedani  committed a642e12 on Tue Aug 18 09:23:19 2020 -0700
+        Moshfegh Hamedani  committed 50db987 on Mon Aug 17 14:27:50 2020 -0700
+        Moshfegh Hamedani  committed 555b62e on Mon Aug 17 14:26:49 2020 -0700
+        Moshfegh Hamedani  committed 91f7d40 on Mon Aug 17 14:25:43 2020 -0700
+        Moshfegh Hamedani  committed edb3594 on Mon Aug 17 14:24:38 2020 -0700
+        Moshfegh Hamedani  committed 24e86ee on Mon Aug 17 14:23:52 2020 -0700
+        Moshfegh Hamedani  committed 36cd6db on Mon Aug 17 14:22:51 2020 -0700
+        Moshfegh Hamedani  committed 9b6ebfd on Mon Aug 17 14:22:17 2020 -0700
+        Moshfegh Hamedani  committed fa1b75e on Mon Aug 17 14:21:30 2020 -0700
+        Moshfegh Hamedani  committed dad47ed on Mon Aug 17 14:20:50 2020 -0700
+        Moshfegh Hamedani  committed fb0d184 on Mon Aug 17 14:18:09 2020 -0700
+        Moshfegh Hamedani  committed 1ebb7a7 on Mon Aug 17 14:17:31 2020 -0700
+        Moshfegh Hamedani  committed ca49180 on Mon Aug 17 14:17:15 2020 -0700
+
+again we can find various placeholders for changing the colors in the same git documentation link as above. 
+
+next, we see how to create an alias for this long command i.e., git log --pretty=format:"%Cgreen%an%Creset committed %h on %cd".
 
 <a name="34"></a>
 ### Aliases
