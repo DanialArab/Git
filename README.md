@@ -1440,6 +1440,61 @@ if we want to see all the files that have been changed in each commit we can use
          4 files changed, 4 insertions(+)
         (END)
 
+to get the full details we can drop the oneline option:
+
+        danial@LYVR-G6423233FB  /mnt/c/Users/danial.arab/Desktop/git-course/Venus   master ±  gi
+        t log --stat
+        
+        commit a642e1229e3cb69be9bf075d9fe5e752e9a17458 (HEAD -> master)
+        Author: Moshfegh Hamedani <moshfegh@live.com.au>
+        Date:   Tue Aug 18 09:23:19 2020 -0700
+        
+            Add header to all pages.
+        
+         audience.txt                                    | 4 +++-
+         objectives.txt                                  | 1 +
+         sections/creating-snapshots/init.txt            | 2 +-
+         sections/creating-snapshots/staging-changes.txt | 2 +-
+         toc.txt                                         | 2 +-
+         5 files changed, 7 insertions(+), 4 deletions(-)
+        
+        commit 50db98710ed4330773f1df55b2a177600d523c9e
+        Author: Moshfegh Hamedani <moshfegh@live.com.au>
+        Date:   Mon Aug 17 14:27:50 2020 -0700
+        
+            Include the first section in TOC.
+        
+         toc.txt | 6 +++++-
+         1 file changed, 5 insertions(+), 1 deletion(-)
+        
+        commit 555b62e1ebb92c97fc69910ad0981a7d6dbbf8c6
+        Author: Moshfegh Hamedani <moshfegh@live.com.au>
+        Date:   Mon Aug 17 14:26:49 2020 -0700
+        
+            Include the note about committing after staging the changes.
+        
+         sections/creating-snapshots/staging-changes.txt | 2 ++
+         1 file changed, 2 insertions(+)
+        
+        commit 91f7d40d6d5bbc336a271607a0488216aaf50cd7
+        Author: Moshfegh Hamedani <moshfegh@live.com.au>
+        Date:   Mon Aug 17 14:25:43 2020 -0700
+        
+            Explain various ways to stage changes.
+        
+         sections/creating-snapshots/staging-changes.txt | 6 +++++-
+         1 file changed, 5 insertions(+), 1 deletion(-)
+        
+        commit edb3594bfa5572d81e24b33aa928938e46907275
+        Author: Moshfegh Hamedani <moshfegh@live.com.au>
+        Date:   Mon Aug 17 14:24:38 2020 -0700
+        
+            First draft of staging changes.
+        
+         sections/creating-snapshots/staging-changes.txt | 5 +++++
+         1 file changed, 5 insertions(+)
+        
+        :
 
 <a name="32"></a>
 ### Filtering the History
