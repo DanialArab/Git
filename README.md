@@ -2097,8 +2097,7 @@ now even though we are in the master branch we can see the commits in other bran
 
 this error says that the branch you ant to delete is not fully merged we see this error because we have some changes in this branch which are not merged with the master branch. Git by default prevents us from accidentally deleting this branch unless we merge it first, but if we are pretty sure that we do not want the changes in this branch we can force the deletion by using D:
 
-        danial@LYVR-G6423233FB  /mnt/c/Users/danial.arab/Desktop/git-course/Venus   master ± 
- git branch -D bugfix-signup-form
+        danial@LYVR-G6423233FB  /mnt/c/Users/danial.arab/Desktop/git-course/Venus   master ±  git branch -D bugfix-signup-form
 
 A point from chatgpt: The new branch will start with the same code as the branch you were on when you created your new branch.
 
