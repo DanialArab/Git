@@ -1366,6 +1366,80 @@ Let's get the repo named Venus to be able to follow along with the course.
 <a name="31"></a>
 ### Viewing the History
 
+Let's delve more into **git log** command. 
+
+we can have additional options in the git log command: 
+
+        danial@LYVR-G6423233FB  /mnt/c/Users/danial.arab/Desktop/git-course/Venus   master ±  git log --oneline
+         
+        a642e12 (HEAD -> master) Add header to all pages.
+        50db987 Include the first section in TOC.
+        555b62e Include the note about committing after staging the changes.
+        91f7d40 Explain various ways to stage changes.
+        edb3594 First draft of staging changes.
+        24e86ee Add command line and GUI tools to the objectives.
+        36cd6db Include the command prompt in code sample.
+        9b6ebfd Add a header to the page about initializing a repo.
+        fa1b75e Include the warning about removing .git directory.
+        dad47ed Write the first draft of initializing a repo.
+        fb0d184 Define the audience.
+        1ebb7a7 Define the objectives.
+        ca49180 Initial commit.
+        (END)
+
+if we want to see all the files that have been changed in each commit we can use the stat option:
+
+
+        danial@LYVR-G6423233FB  /mnt/c/Users/danial.arab/Desktop/git-course/Venus   master ±  git log --oneline --stat
+        
+         a642e12 (HEAD -> master) Add header to all pages.
+         audience.txt                                    | 4 +++-
+         objectives.txt                                  | 1 +
+         sections/creating-snapshots/init.txt            | 2 +-
+         sections/creating-snapshots/staging-changes.txt | 2 +-
+         toc.txt                                         | 2 +-
+         5 files changed, 7 insertions(+), 4 deletions(-)
+        50db987 Include the first section in TOC.
+         toc.txt | 6 +++++-
+         1 file changed, 5 insertions(+), 1 deletion(-)
+        555b62e Include the note about committing after staging the changes.
+         sections/creating-snapshots/staging-changes.txt | 2 ++
+         1 file changed, 2 insertions(+)
+        91f7d40 Explain various ways to stage changes.
+         sections/creating-snapshots/staging-changes.txt | 6 +++++-
+         1 file changed, 5 insertions(+), 1 deletion(-)
+        edb3594 First draft of staging changes.
+         sections/creating-snapshots/staging-changes.txt | 5 +++++
+         1 file changed, 5 insertions(+)
+        24e86ee Add command line and GUI tools to the objectives.
+         objectives.txt | 3 ++-
+         1 file changed, 2 insertions(+), 1 deletion(-)
+        36cd6db Include the command prompt in code sample.
+         sections/creating-snapshots/init.txt | 3 ++-
+         1 file changed, 2 insertions(+), 1 deletion(-)
+        9b6ebfd Add a header to the page about initializing a repo.
+         sections/creating-snapshots/init.txt | 2 ++
+         1 file changed, 2 insertions(+)
+        fa1b75e Include the warning about removing .git directory.
+         sections/creating-snapshots/init.txt | 3 +++
+         1 file changed, 3 insertions(+)
+        dad47ed Write the first draft of initializing a repo.
+         sections/creating-snapshots/init.txt | 3 +++
+         1 file changed, 3 insertions(+)
+        fb0d184 Define the audience.
+         audience.txt | 3 ++-
+         1 file changed, 2 insertions(+), 1 deletion(-)
+        1ebb7a7 Define the objectives.
+         objectives.txt | 5 +++++
+         1 file changed, 5 insertions(+)
+        ca49180 Initial commit.
+         audience.txt   | 1 +
+         objectives.txt | 1 +
+         sales-page.txt | 1 +
+         toc.txt        | 1 +
+         4 files changed, 4 insertions(+)
+        (END)
+
 
 <a name="32"></a>
 ### Filtering the History
