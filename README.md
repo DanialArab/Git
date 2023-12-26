@@ -1866,7 +1866,6 @@ here
 <a name="47"></a>
 ### Introduction
 
-
 Branching is one of the most important and powerful features of Git, we will learn how to 
 + use branches to **diverge from the main line of development and work on something else in isolation**
 + compare branches to see their differences
@@ -1879,6 +1878,33 @@ what we learn here in this section can totally change the way we develop softwar
 
 <a name="48"></a>
 ### What are Branches
+
+Branching allows us to diverge from the main line of work and work on something else in isolation. Conceptually, we can think of a branch as a separate isolated workspace. We have our main workspace called master then we can have another workspace for working on a new feature in isolation, while we are developing this new feature our code make it unstable so we do not want to release the code in this workspace, we continue working here in this branch then hen we are done we test our code and after we fix all the bugs  we bring the changes in this workspace into the master. This is called merging. Branching allows us to work on different work items without messing up with the main line of work. We keep the main line as stable as possible so we can release it anytime. Also anyone joining our team can start off on a stable code base. That is the idea of branching. 
+
+The way Git manages branches is very different from many other version control systems like subversion. In subversion when we create a new branch subversion takes a copy of our entire working directory and stores it somewhere else and so this operation takes a while and that is why a lot of subversion users hate branching because it is slow and can waste a lot of space. On the other hand, Git branches are super fast and cheap because branching in Git is just a pointer to a commit. So the master branch is just a pointer to the last commit in the main line of work. As we make new commits, Git moves this pointer forward automatically so it knows what is the latest code in the main line of code. The res in the figure below is the snapshot stored in the last commit:
+
+![](https://github.com/DanialArab/images/blob/main/Git/git%20image.png)
+
+when we create a new branch, Git creates a new pointer that can be moved around:
+
+![](https://github.com/DanialArab/images/blob/main/Git/git%20image%202.png)
+
+this pointer is just a tiny file that contains a 40-byte commit ID. That is why creating a branch in Git is blazingly fast. When we switch to the FEATURE branch in this example, and make new commits Git moves this pointer forward, while the master pointer stays where it is, so Git knows the latest code in each branch (in red below):
+
+![](https://github.com/DanialArab/images/blob/main/Git/git%20image%203.png)
+
+when we switch back to master Git takes the snapshot from the commit that master points to and resets our working directory to that snapshot. So we always have a single woking directory.
+
+How does Git know which branch we are currently working on? Using a special pointer called HEAD:
+
+![](https://github.com/DanialArab/images/blob/main/Git/git%20image%204.png)
+
+
+this pointer is also another tiny file that contains the name of the branch like master when we switch to a different branch Git moves the HEAD pointer around:
+
+![](https://github.com/DanialArab/images/blob/main/Git/git%20image%205.png)
+
+so it updates the tiny file and writes the name of the target branch. This is how Git can track what branch we are currently working on. 
 
 <a name="49"></a>
 ### Getting a Repository
