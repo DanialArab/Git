@@ -1861,9 +1861,74 @@ next, we see how to create an alias for this long command i.e., git log --pretty
 <a name="46"></a>
 ## Branching
 
-here
+<a name="47"></a>
+### Introduction
 
+<a name="48"></a>
+### What are Branches
+
+<a name="49"></a>
+### Getting a Repository
+
+<a name="50"></a>
+### Working with Branches
+
+<a name="51"></a>
+### Comparing Branches
+
+<a name="52"></a>
+### Stashing
+
+<a name="53"></a>
+### Merging
+
+<a name="54"></a>
+### Fast-forward Merges
+
+<a name="55"></a>
+### 3-way Merges
+
+<a name="56"></a>
+### Viewing Merged and Unmerged Branches
+
+<a name="57"></a>
+### Merge Conflicts
+
+<a name="58"></a>
+### Graphical Merge Tools
+
+<a name="59"></a>
+### Aborting a Merge
+
+<a name="60"></a>
+### Undoing a Faulty Merge
+
+<a name="61"></a>
+### Squash Merging
+
+<a name="62"></a>
+### Rebasing
+
+<a name="63"></a>
+### Cherry Picking
+
+<a name="64"></a>
+### Picking a File from Another Branch
+
+<a name="65"></a>
+### Branching in VSCode
+
+<a name="66"></a>
+### Branching in GitKraken
+
+<a name="67"></a>
 ## Collaboration
+
+<a name="68"></a>
+### 
+
+<a name="69"></a>
+### 
 
 ## Rewriting History
 
