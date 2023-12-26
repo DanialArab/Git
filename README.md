@@ -1554,6 +1554,81 @@ what if we want to see the actual chanegs in each commit? we can use the patch o
 <a name="32"></a>
 ### Filtering the History
 
+to see the last three commits:
+
+        danial@LYVR-G6423233FB  /mnt/c/Users/danial.arab/Desktop/git-course/Venus   master ±  gi
+        t log --oneline -3
+        
+        
+        a642e12 (HEAD -> master) Add header to all pages.
+        50db987 Include the first section in TOC.
+        555b62e Include the note about committing after staging the changes.
+        (END)
+
+to filter the history by author:
+
+        danial@LYVR-G6423233FB  /mnt/c/Users/danial.arab/Desktop/git-course/Venus   master ± 
+        git log --oneline --author="Mosh"
+        
+        
+        a642e12 (HEAD -> master) Add header to all pages.
+        50db987 Include the first section in TOC.
+        555b62e Include the note about committing after staging the changes.
+        91f7d40 Explain various ways to stage changes.
+        edb3594 First draft of staging changes.
+        24e86ee Add command line and GUI tools to the objectives.
+        36cd6db Include the command prompt in code sample.
+        9b6ebfd Add a header to the page about initializing a repo.
+        fa1b75e Include the warning about removing .git directory.
+        dad47ed Write the first draft of initializing a repo.
+        fb0d184 Define the audience.
+        1ebb7a7 Define the objectives.
+        ca49180 Initial commit.
+        (END)
+
+we can also filter by dates using before or after options like if we want to see all the commits from August 16, 2020:
+
+        danial@LYVR-G6423233FB  /mnt/c/Users/danial.arab/Desktop/git-course/Venus   master ±  git log --oneline --after="2020-08-16"
+        
+        a642e12 (HEAD -> master) Add header to all pages.
+        50db987 Include the first section in TOC.
+        555b62e Include the note about committing after staging the changes.
+        91f7d40 Explain various ways to stage changes.
+        edb3594 First draft of staging changes.
+        24e86ee Add command line and GUI tools to the objectives.
+        36cd6db Include the command prompt in code sample.
+        9b6ebfd Add a header to the page about initializing a repo.
+        fa1b75e Include the warning about removing .git directory.
+        dad47ed Write the first draft of initializing a repo.
+        fb0d184 Define the audience.
+        1ebb7a7 Define the objectives.
+        ca49180 Initial commit.
+        (END)
+
+or to see all the commits from yesterday:
+
+        danial@LYVR-G6423233FB  /mnt/c/Users/danial.arab/Desktop/git-course/Venus   master ±  git log --oneline --after="yesterday"
+
+or to see all the commits from oen week ago:
+
+        danial@LYVR-G6423233FB  /mnt/c/Users/danial.arab/Desktop/git-course/Venus   master ±  git log --oneline --after="one week ago"
+
+to filter by commit message or subject, like to see all the commits which have the word "GUI" in their message (of course this operation is case sensitive):
+
+        danial@LYVR-G6423233FB  /mnt/c/Users/danial.arab/Desktop/git-course/Venus   master ±  git log --oneline --grep="GUI"
+        
+        24e86ee Add command line and GUI tools to the objectives.
+        (END)
+
+we can also filter the history by content, let's say we want to find all the commits that have added or removed a function declaration, like to see all the commits that have added or removed the function hello():
+
+
+        danial@LYVR-G6423233FB  /mnt/c/Users/danial.arab/Desktop/git-course/Venus   master ±  git log --oneline -S"hello()"
+
+
+
+
+ 
 <a name="33"></a>
 ### Formatting the Log Output
 
