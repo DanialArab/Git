@@ -1724,6 +1724,68 @@ if we want to see the actual changes n each of these commits, once again we can 
 <a name="33"></a>
 ### Formatting the Log Output
 
+we can easily customize the output of the log command. In the double quotes, we can specify the format string, which can be a combination of plain text and some placeholders that will get replaced by Git to display pieces of information about each commit:
+
+        danial@LYVR-G6423233FB  /mnt/c/Users/danial.arab/Desktop/git-course/Venus   master ±  git log --pretty=format:"hello %an"
+        
+        hello Moshfegh Hamedani
+        hello Moshfegh Hamedani
+        hello Moshfegh Hamedani
+        hello Moshfegh Hamedani
+        hello Moshfegh Hamedani
+        hello Moshfegh Hamedani
+        hello Moshfegh Hamedani
+        hello Moshfegh Hamedani
+        hello Moshfegh Hamedani
+        hello Moshfegh Hamedani
+        hello Moshfegh Hamedani
+        hello Moshfegh Hamedani
+        hello Moshfegh Hamedani
+        (END)
+
+        danial@LYVR-G6423233FB  /mnt/c/Users/danial.arab/Desktop/git-course/Venus   master ±  git log --pretty=format:"%an committed %H
+        "
+        
+        Moshfegh Hamedani committed a642e1229e3cb69be9bf075d9fe5e752e9a17458
+        Moshfegh Hamedani committed 50db98710ed4330773f1df55b2a177600d523c9e
+        Moshfegh Hamedani committed 555b62e1ebb92c97fc69910ad0981a7d6dbbf8c6
+        Moshfegh Hamedani committed 91f7d40d6d5bbc336a271607a0488216aaf50cd7
+        Moshfegh Hamedani committed edb3594bfa5572d81e24b33aa928938e46907275
+        Moshfegh Hamedani committed 24e86ee2f15e47a0d7b51032d2dc5b684b33465a
+        Moshfegh Hamedani committed 36cd6db402cfd897810d4cb33d97ac1e9d1ce2d8
+        Moshfegh Hamedani committed 9b6ebfdac0e8a775f17418a63f1153ee74078163
+        Moshfegh Hamedani committed fa1b75e8d342a4cb507c28d5417ae6a9111ba81a
+        Moshfegh Hamedani committed dad47edb45fb6912ecbb9034daca59f0491da1ab
+        Moshfegh Hamedani committed fb0d184c7e31cbb00eed45c98ba502e466b60152
+        Moshfegh Hamedani committed 1ebb7a701c4e86331cc64fada6ac1057fdf2dcde
+        Moshfegh Hamedani committed ca4918083ec471878d58612142572f3367faf5fd
+
+
+since it is too verbose we can use the lower case h to see the abbreviation:
+
+        danial@LYVR-G6423233FB  /mnt/c/Users/danial.arab/Desktop/git-course/Venus   master ±  git log --pretty=format:"%an committed %h
+        "
+        
+        Moshfegh Hamedani committed a642e12
+        Moshfegh Hamedani committed 50db987
+        Moshfegh Hamedani committed 555b62e
+        Moshfegh Hamedani committed 91f7d40
+        Moshfegh Hamedani committed edb3594
+        Moshfegh Hamedani committed 24e86ee
+        Moshfegh Hamedani committed 36cd6db
+        Moshfegh Hamedani committed 9b6ebfd
+        Moshfegh Hamedani committed fa1b75e
+        Moshfegh Hamedani committed dad47ed
+        Moshfegh Hamedani committed fb0d184
+        Moshfegh Hamedani committed 1ebb7a7
+        Moshfegh Hamedani committed ca49180
+
+the complete list of these placeholders can be found here **<a href="https://git-scm.com/docs/git-log
+">Git log documentation</a>**
+
+
+
+
 <a name="34"></a>
 ### Aliases
 
