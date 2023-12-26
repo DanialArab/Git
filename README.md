@@ -1969,7 +1969,7 @@ now
           master
         (END)
 
-now as shown we are in the bugfix branch. But we need to be more clear in the name of branches to make it clear what bug we are trying to fix in this branch, to rename a branch (this is very helpful because in the future we may have hundreds of bugs to fix so it is better to use a more specific name). To rename this branch:
+now as shown we are in the bugfix branch. But we need to be more clear in the name of branches to make it clear what bug we are trying to fix in this branch (this is very helpful because in the future we may have hundreds of bugs to fix so it is better to use a more specific name). To rename this branch:
 
         danial@LYVR-G6423233FB  /mnt/c/Users/danial.arab/Desktop/git-course/Venus   bugfix ±  git branch -m bugfix bugfix-signup-form
 
