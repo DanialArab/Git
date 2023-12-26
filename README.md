@@ -1625,10 +1625,60 @@ we can also filter the history by content, let's say we want to find all the com
 
         danial@LYVR-G6423233FB  /mnt/c/Users/danial.arab/Desktop/git-course/Venus   master ±  git log --oneline -S"hello()"
 
+since in our repository, we don't have any codes but only the plain English, let's find all the commits that have added the word "OBJECTIVES" 
+
+        danial@LYVR-G6423233FB  /mnt/c/Users/danial.arab/Desktop/git-course/Venus   master ±  git log --oneline -S"OBJECTIVE"
+        
+        a642e12 (HEAD -> master) Add header to all pages.
+        (END)
+
+to see the actual changes in this commit, we can use the patch option: 
 
 
+        danial@LYVR-G6423233FB  /mnt/c/Users/danial.arab/Desktop/git-course/Venus   master ±  git log --oneline -S"OBJECTIVES" --patch
+        
+        a642e12 (HEAD -> master) Add header to all pages.
+        diff --git a/objectives.txt b/objectives.txt
+        index d31b40a..c882718 100644
+        --- a/objectives.txt
+        +++ b/objectives.txt
+        @@ -1,3 +1,4 @@
+        +OBJECTIVES
+        
+         By the end of this course, you'll be able to
+         - Create snapshots
+        (END)
 
- 
+we can also filter the history by a range of commits: we need to have double periods between the hashes of the two commits of interest:
+
+        danial@LYVR-G6423233FB  /mnt/c/Users/danial.arab/Desktop/git-course/Venus   master ±  git log --oneline
+        
+        a642e12 (HEAD -> master) Add header to all pages.
+        50db987 Include the first section in TOC.
+        555b62e Include the note about committing after staging the changes.
+        91f7d40 Explain various ways to stage changes.
+        edb3594 First draft of staging changes.
+        24e86ee Add command line and GUI tools to the objectives.
+        36cd6db Include the command prompt in code sample.
+        9b6ebfd Add a header to the page about initializing a repo.
+        fa1b75e Include the warning about removing .git directory.
+        dad47ed Write the first draft of initializing a repo.
+        fb0d184 Define the audience.
+        1ebb7a7 Define the objectives.
+        ca49180 Initial commit.
+        (END)
+        
+        
+        danial@LYVR-G6423233FB  /mnt/c/Users/danial.arab/Desktop/git-course/Venus   master ±  git log --oneline fb0d184..edb3594
+        
+        edb3594 First draft of staging changes.
+        24e86ee Add command line and GUI tools to the objectives.
+        36cd6db Include the command prompt in code sample.
+        9b6ebfd Add a header to the page about initializing a repo.
+        fa1b75e Include the warning about removing .git directory.
+        dad47ed Write the first draft of initializing a repo.
+        (END)
+        
 <a name="33"></a>
 ### Formatting the Log Output
 
