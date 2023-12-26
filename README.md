@@ -1496,6 +1496,61 @@ to get the full details we can drop the oneline option:
         
         :
 
+what if we want to see the actual chanegs in each commit? we can use the patch option:
+
+        danial@LYVR-G6423233FB  /mnt/c/Users/danial.arab/Desktop/git-course/Venus   master ±  git log --oneline --patch
+        
+        a642e12 (HEAD -> master) Add header to all pages.
+        diff --git a/audience.txt b/audience.txt
+        index 6b3f8f5..4cfef55 100644
+        --- a/audience.txt
+        +++ b/audience.txt
+        @@ -1,2 +1,4 @@
+        +AUDIENCE
+        +
+         This course is for anyone who wants to learn Git.
+        -No prior experience is required.
+        +No prior experience is required.
+        \ No newline at end of file
+        diff --git a/objectives.txt b/objectives.txt
+        index d31b40a..c882718 100644
+        --- a/objectives.txt
+        +++ b/objectives.txt
+        @@ -1,3 +1,4 @@
+        +OBJECTIVES
+        
+         By the end of this course, you'll be able to
+         - Create snapshots
+        diff --git a/sections/creating-snapshots/init.txt b/sections/creating-snapshots/init.txt
+        index 638729e..f63189e 100644
+        --- a/sections/creating-snapshots/init.txt
+        +++ b/sections/creating-snapshots/init.txt
+        @@ -1,5 +1,5 @@
+         INITIALIZING A REPOSITORY
+        --------------------------
+        +
+         The first step is to initialize a Git repository.
+         To do that run:
+        
+        diff --git a/sections/creating-snapshots/staging-changes.txt b/sections/creating-snapshots/staging-changes.txt
+        index 506a158..ee0ab5c 100644
+        --- a/sections/creating-snapshots/staging-changes.txt
+        +++ b/sections/creating-snapshots/staging-changes.txt
+        @@ -1,5 +1,5 @@
+         STAGING CHANGES
+        -===============
+        +
+         To stage the changes, run:
+        
+         > git add <filename>
+        diff --git a/toc.txt b/toc.txt
+        index d019492..cc0798f 100644
+        --- a/toc.txt
+        +++ b/toc.txt
+        @@ -1,5 +1,5 @@
+        :
+
+
 <a name="32"></a>
 ### Filtering the History
 
