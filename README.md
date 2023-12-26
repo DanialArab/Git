@@ -1961,8 +1961,148 @@ So to fix this imaginary bug we first need to change the current branch to bugfi
         M       toc.txt
         Switched to branch 'bugfix'
 
+now 
 
-. The new branch will start with the same code as the branch you were on when you created it
+        danial@LYVR-G6423233FB  /mnt/c/Users/danial.arab/Desktop/git-course/Venus   bugfix ±  git branch
+         
+        * bugfix
+          master
+        (END)
+
+now as shown we are in the bugfix branch. But we need to be more clear in the name of branches to make it clear what bug we are trying to fix in this branch do to rename a branch (this is very helpful because in the future we may have hundreds of bugs to fix so it is better to use a more specific name). To rename this branch:
+
+        danial@LYVR-G6423233FB  /mnt/c/Users/danial.arab/Desktop/git-course/Venus   bugfix ±  git branch -m bugfix bugfix-signup-form
+
+         danial@LYVR-G6423233FB  /mnt/c/Users/danial.arab/Desktop/git-course/Venus   bugfix-signup-form ± 
+
+        danial@LYVR-G6423233FB  /mnt/c/Users/danial.arab/Desktop/git-course/Venus   bugfix-signup-form ±  git branch
+         
+         * bugfix-signup-form
+          master
+        (END)
+
+so now let's make some changes in the audience.txt form:
+
+        danial@LYVR-G6423233FB  /mnt/c/Users/danial.arab/Desktop/git-course/Venus   bugfix-signup-form ±  ls
+        audience.txt  objectives.txt  sales-page.txt  sections  toc.txt
+        
+        danial@LYVR-G6423233FB  /mnt/c/Users/danial.arab/Desktop/git-course/Venus   bugfix-signup-form ±  code audience.txt
+
+after some changes in the file:
+
+        danial@LYVR-G6423233FB  /mnt/c/Users/danial.arab/Desktop/git-course/Venus   bugfix-signup-form ±  git status
+        On branch bugfix-signup-form
+        Changes not staged for commit:
+          (use "git add <file>..." to update what will be committed)
+          (use "git restore <file>..." to discard changes in working directory)
+                modified:   audience.txt
+        
+        no changes added to commit (use "git add" and/or "git commit -a")
+
+
+        danial@LYVR-G6423233FB  /mnt/c/Users/danial.arab/Desktop/git-course/Venus   bugfix-signup-form ±  git add .
+        danial@LYVR-G6423233FB  /mnt/c/Users/danial.arab/Desktop/git-course/Venus   bugfix-signup-form ✚  git commit -m"Fixed the bug that prevented the users from signing up."
+        [bugfix-signup-form f582a7f] Fixed the bug that prevented the users from signing up.
+         6 files changed, 2 insertions(+), 3 deletions(-)
+         mode change 100644 => 100755 audience.txt
+        danial@LYVR-G6423233FB  /mnt/c/Users/danial.arab/Desktop/git-course/Venus   bugfix-signup-form  git log --oneline
+        
+         
+        f582a7f (HEAD -> bugfix-signup-form) Fixed the bug that prevented the users from signing up.
+        a642e12 (master) Add header to all pages.
+        50db987 Include the first section in TOC.
+        555b62e Include the note about committing after staging the changes.
+        91f7d40 Explain various ways to stage changes.
+        edb3594 First draft of staging changes.
+        24e86ee Add command line and GUI tools to the objectives.
+        36cd6db Include the command prompt in code sample.
+        9b6ebfd Add a header to the page about initializing a repo.
+        fa1b75e Include the warning about removing .git directory.
+        dad47ed Write the first draft of initializing a repo.
+        fb0d184 Define the audience.
+        1ebb7a7 Define the objectives.
+        ca49180 Initial commit.
+        (END)
+
+on the top we have HEAD pointing to the bugfix-signup-form branch that means we are currently in the bugfix-signup-form branch. and "Fixed the bug that prevented the users from signing up." is the latest commit in this branch. Below that we have the master branch which is just a pointer to a commit. As seen our master branch is one commit behind the bugfix-signup-form branch, at some point in the future we are going to merge the bugfix-signup-form branch with the master branch to bring the master branch up, will be discussed later. 
+
+The changes we made in the audience.txt file are ONLY visible in the bugfix-signup-form branch so let's open the audience.txt file in this branch:
+
+         danial@LYVR-G6423233FB  /mnt/c/Users/danial.arab/Desktop/git-course/Venus   bugfix-signup-form  ls
+        audience.txt  objectives.txt  sales-page.txt  sections  toc.txt
+         danial@LYVR-G6423233FB  /mnt/c/Users/danial.arab/Desktop/git-course/Venus   bugfix-signup-form  code audience.txt
+        
+        WHO THIS COURSE IS for
+        ======================
+        This course is for anyone who wants to learn Git. 
+
+so if we switch back to the master branch and open the audience.txt file we have:
+
+        danial@LYVR-G6423233FB  /mnt/c/Users/danial.arab/Desktop/git-course/Venus   bugfix-signup-form  git switch master
+        Switched to branch 'master'
+         danial@LYVR-G6423233FB  /mnt/c/Users/danial.arab/Desktop/git-course/Venus   master ±  c
+        ode audience.txt
+        
+        AUDIENCE 
+        
+        This course is for anyone who wants to learn Git. 
+        No prior experience is required.
+
+which is the old version of this file. So **branches allow us to work on different tasks in isolation. The codes we have in these branches are isolated at some point we merge them to bring them together**. While we are in the master branch if we look at our log:
+
+        danial@LYVR-G6423233FB  /mnt/c/Users/danial.arab/Desktop/git-course/Venus   master ±  git log --oneline
+        
+        a642e12 (HEAD -> master) Add header to all pages.
+        50db987 Include the first section in TOC.
+        555b62e Include the note about committing after staging the changes.
+        91f7d40 Explain various ways to stage changes.
+        edb3594 First draft of staging changes.
+        24e86ee Add command line and GUI tools to the objectives.
+        36cd6db Include the command prompt in code sample.
+        9b6ebfd Add a header to the page about initializing a repo.
+        fa1b75e Include the warning about removing .git directory.
+        dad47ed Write the first draft of initializing a repo.
+        fb0d184 Define the audience.
+        1ebb7a7 Define the objectives.
+        ca49180 Initial commit.
+        (END)
+
+
+on the top we see that HEAD is pointing to the master branch and we do not see the bugfix-signup-form branch because bugfix-signup-form is ahead of the master branch and so its commits are not listed here by default. To view the commits across all the branches we use the **all** option:
+
+        danial@LYVR-G6423233FB  /mnt/c/Users/danial.arab/Desktop/git-course/Venus   master ±  git log --oneline --all
+        
+        f582a7f (bugfix-signup-form) Fixed the bug that prevented the users from signing up.
+        a642e12 (HEAD -> master) Add header to all pages.
+        50db987 Include the first section in TOC.
+        555b62e Include the note about committing after staging the changes.
+        91f7d40 Explain various ways to stage changes.
+        edb3594 First draft of staging changes.
+        24e86ee Add command line and GUI tools to the objectives.
+        36cd6db Include the command prompt in code sample.
+        9b6ebfd Add a header to the page about initializing a repo.
+        fa1b75e Include the warning about removing .git directory.
+        dad47ed Write the first draft of initializing a repo.
+        fb0d184 Define the audience.
+        1ebb7a7 Define the objectives.
+        ca49180 Initial commit.
+        (END)
+
+now even though we are in the master branch we can see the commits in other branches. At some time in the future when we are done with the bugfix-signup-for branch when we merged it into the master branch we need to delete it:
+
+        danial@LYVR-G6423233FB  /mnt/c/Users/danial.arab/Desktop/git-course/Venus   master ±  g
+        it branch -d bugfix-signup-form
+        error: The branch 'bugfix-signup-form' is not fully merged.
+        If you are sure you want to delete it, run 'git branch -D bugfix-signup-form'.
+
+this error says that the branch you ant to delete is not fully merged we see this error because we have some changes in this branch which are not merged with the master branch. Git by default prevents us from accidentally deleting this branch unless we merge it first, but if we are pretty sure that we do not want the changes in this branch we can force the deletion by using D:
+
+        danial@LYVR-G6423233FB  /mnt/c/Users/danial.arab/Desktop/git-course/Venus   master ± 
+ git branch -D bugfix-signup-form
+
+A point from chatgpt: The new branch will start with the same code as the branch you were on when you created your new branch.
+
+
 
 <a name="51"></a>
 ### Comparing Branches
