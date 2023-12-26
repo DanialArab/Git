@@ -1825,6 +1825,8 @@ next, we see how to create an alias for this long command i.e., git log --pretty
 <a name="34"></a>
 ### Aliases
 
+here
+
 <a name="35"></a>
 ### Viewing a Commit
 
@@ -1863,6 +1865,17 @@ next, we see how to create an alias for this long command i.e., git log --pretty
 
 <a name="47"></a>
 ### Introduction
+
+
+Branching is one of the most important and powerful features of Git, we will learn how to 
++ use branches to **diverge from the main line of development and work on something else in isolation**
++ compare branches to see their differences
++ to merge branches (different merging techniques: fast forward merging, 3-way merging, squash merging, and rebasing)
++ resolve merge conflicts
++  undo a faulty merge
++  use the essential tools (stashing, cherry picking)
+
+what we learn here in this section can totally change the way we develop software. 
 
 <a name="48"></a>
 ### What are Branches
