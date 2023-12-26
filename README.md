@@ -1361,9 +1361,11 @@ We look at various ways to browse the history of our project. We will learn:
 <a name="30"></a>
 ### Getting a Repository
 
+Let's get the repo named Venus to be able to follow along with the course. 
 
 <a name="31"></a>
 ### Viewing the History
+
 
 <a name="32"></a>
 ### Filtering the History
