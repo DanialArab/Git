@@ -2105,6 +2105,9 @@ A point from chatgpt: The new branch will start with the same code as the branch
 ### Comparing Branches
 
 As we commit to our branches we need to know how they diverge from the master. So here we discuss different ways to compare branches: 
++ To see all the commits ----> git log --oneline master..bugfix-signup-form
++ To see all the actual changes and not the list of commits ----> git diff master..bugfix-signup-form
++ To see the name of the files that will be affected after merging ----> git diff --name-only master..bugfix-signup-form OR git diff --name-status master..bugfix-signup-form
 
 to know what commits are coming into master after merging the bugfix-signup-form branch into the master, the following commands means show me **all the commits that are in bugfix-signup-form and NOT in the master:** 
 
