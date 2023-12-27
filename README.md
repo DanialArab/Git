@@ -2106,7 +2106,7 @@ A point from chatgpt: The new branch will start with the same code as the branch
 
 As we commit to our branches we need to know how they diverge from the master. So here we discuss different ways to compare branches: 
 
-to know what commits are coming into master after merging the bugfix-signup-form branch into the master, the following commands means show me all the commits that are in bugfix-signup-form and NOT in the master: 
+to know what commits are coming into master after merging the bugfix-signup-form branch into the master, the following commands means show me **all the commits that are in bugfix-signup-form and NOT in the master:** 
 
         danial@LYVR-G6423233FB  /mnt/c/Users/danial.arab/Desktop/git-course/Venus   master ±  git log master..bugfix-signup-form
         
