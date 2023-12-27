@@ -2124,7 +2124,7 @@ of course, we can make the oneline option to make the output more concise:
         f582a7f (bugfix-signup-form) Fixed the bug that prevented the users from signing up.
         (END)
 
-what if we want to see the actual changes and not the list of commits: **git diff** like:
+what if we want to see the actual changes and not the list of commits: we do **git diff** like:
 
 
         danial@LYVR-G6423233FB  /mnt/c/Users/danial.arab/Desktop/git-course/Venus   master ±  git diff master..bugfix-signup-form
