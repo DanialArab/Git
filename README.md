@@ -1932,7 +1932,7 @@ to create a new branch:
         * master
         (END)
 
-the asterisk before master branch indicates that we are currently in the master branch. This is also clear in my zsh. This is very helpful because one of the issues a lot of p[people struggle with is to accidentally commit their code into the wrong branch. Another way to see the current branch is through the command git status:
+the asterisk before master branch indicates that we are currently in the master branch. This is also clear in my zsh. This is very helpful because one of the issues a lot of people struggle with is to accidentally commit their code into the wrong branch. Another way to see the current branch is through the command git status:
 
         danial@LYVR-G6423233FB  /mnt/c/Users/danial.arab/Desktop/git-course/Venus   master ±  git status
         On branch master
