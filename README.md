@@ -2101,10 +2101,88 @@ this error says that the branch you ant to delete is not fully merged we see thi
 
 A point from chatgpt: The new branch will start with the same code as the branch you were on when you created your new branch.
 
-
-
 <a name="51"></a>
 ### Comparing Branches
+
+As we commit to our branches we need to know how they diverge from the master. So here we discuss different ways to compare branches: 
+
+to know what commits are coming into master after merging the bugfix-signup-form branch into the master, the following commands means show me all the commits that are in bugfix-signup-form and NOT in the master: 
+
+        danial@LYVR-G6423233FB  /mnt/c/Users/danial.arab/Desktop/git-course/Venus   master ±  git log master..bugfix-signup-form
+        
+        commit f582a7ff9a8d2f20ceefc186f2c87a1f7a23d007 (bugfix-signup-form)
+        Author: Danial Arab <danial.arab@trulioo.com>
+        Date:   Tue Dec 26 03:27:53 2023 -0800
+        
+            Fixed the bug that prevented the users from signing up.
+        (END)
+
+of course, we can make the oneline option to make the output more concise: 
+
+        danial@LYVR-G6423233FB  /mnt/c/Users/danial.arab/Desktop/git-course/Venus   master ±  git log --oneline master..bugfix-signup-form
+         
+        f582a7f (bugfix-signup-form) Fixed the bug that prevented the users from signing up.
+        (END)
+
+what if we want to see the actual changes and not the list of commits: **git diff** like:
+
+
+        danial@LYVR-G6423233FB  /mnt/c/Users/danial.arab/Desktop/git-course/Venus   master ±  git diff master..bugfix-signup-form
+        
+        
+        diff --git a/audience.txt b/audience.txt
+        old mode 100644
+        new mode 100755
+        index 4cfef55..e8bdbd5
+        --- a/audience.txt
+        +++ b/audience.txt
+        @@ -1,4 +1,3 @@
+        -AUDIENCE
+        -
+        +WHO THIS COURSE IS for
+        +======================
+         This course is for anyone who wants to learn Git.
+        -No prior experience is required.
+        \ No newline at end of file
+        (END)
+
+so now we know that when we merge the bugfix-signup-form branch into master in the audience.txt file we are going to have thes changes. 
+
+there is a shorter way to write this command, because we are currently in the master branch we may shorten the above command as:
+
+        danial@LYVR-G6423233FB  /mnt/c/Users/danial.arab/Desktop/git-course/Venus   master ±  git diff bugfix-signup-form
+         
+        diff --git a/audience.txt b/audience.txt
+        index e8bdbd5..4cfef55 100755
+        --- a/audience.txt
+        +++ b/audience.txt
+        @@ -1,3 +1,4 @@
+        -WHO THIS COURSE IS for
+        -======================
+        +AUDIENCE
+        +
+         This course is for anyone who wants to learn Git.
+        +No prior experience is required.
+        \ No newline at end of file
+        (END)
+
+this shows the differences between the bugfix-signup-form branch and the current branch which is master.
+
+Sometimes, we do not want to see the changes in terms of the code and instead, we just want to know what files will be affected, to do so we use the option **name-only** or **name-status**:
+
+        danial@LYVR-G6423233FB  /mnt/c/Users/danial.arab/Desktop/git-course/Venus   master ±  git diff --name-only master..bugfix-signup-form
+         
+        audience.txt
+        (END)
+
+or
+
+        danial@LYVR-G6423233FB  /mnt/c/Users/danial.arab/Desktop/git-course/Venus   master ±  git diff --name-status master..bugfix-signup-form
+        
+        M       audience.txt
+        (END)
+
+so once we merge the bugfix-signup-form branch into the master the file audience.txt will be modified. 
 
 <a name="52"></a>
 ### Stashing
