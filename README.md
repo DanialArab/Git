@@ -2192,47 +2192,37 @@ so once we merge the bugfix-signup-form branch into the master the file audience
 
 When we switch branches, Git resets our working directory to the snapshot stored in the last commit of the target branch. If we have local changes in our working directory that we have not committed yet these changes could get lost. In these situations, Git does not allow us to switch branches. 
 
-         danial@LYVR-G6423233FB  /mnt/c/Users/danial.arab/Desktop/git-course/Venus   master ±  git status -s
-         M audience.txt
-         M objectives.txt
-         M sales-page.txt
-         M sections/creating-snapshots/init.txt
-         M sections/creating-snapshots/staging-changes.txt
-         M toc.txt
-         danial@LYVR-G6423233FB  /mnt/c/Users/danial.arab/Desktop/git-course/Venus   master ±  git switch bugfix-signup-form
+        danial@LYVR-G6423233FB  /mnt/c/Users/danial.arab/Desktop/git-course/branching/Venus   master  nano audience.txt
+        
+        # I added * to just have a change
+        * AUDIENCE
+        
+        This course is for anyone who wants to learn Git.
+        No prior experience is required.
+        
+        danial@LYVR-G6423233FB  /mnt/c/Users/danial.arab/Desktop/git-course/branching/Venus   master ±  git switch bugfix-signup-form
         error: Your local changes to the following files would be overwritten by checkout:
                 audience.txt
-                objectives.txt
-                sales-page.txt
-                sections/creating-snapshots/init.txt
-                sections/creating-snapshots/staging-changes.txt
-                toc.txt
         Please commit your changes or stash them before you switch branches.
         Aborting
 
 Here is the Git error message "Please commit your changes or stash them before you switch branches.". In this case, I do not want to commit the changes let's say I am in the middle of something and I am not done yet and I just need to quickly switch to the other branch. In these situations, I need to stash the changes. Stashing something means storing it in a safe place. So we store the changes somewhere in our Git repo but this will not be part of our history. To stash the changes:
 
 
-        danial@LYVR-G6423233FB  /mnt/c/Users/danial.arab/Desktop/git-course/Venus   master ±  git stash push -m "New tax rules."
+        danial@LYVR-G6423233FB  /mnt/c/Users/danial.arab/Desktop/git-course/branching/Venus   master ±  git stash push -m "New tax rules."
         Saved working directory and index state On master: New tax rules.
 
 
 Remember: new untracked files are not by default included in your stash. 
 
-        danial@LYVR-G6423233FB  /mnt/c/Users/danial.arab/Desktop/git-course/Venus   master ±  echo hello > newfile.txt
-         danial@LYVR-G6423233FB  /mnt/c/Users/danial.arab/Desktop/git-course/Venus   master ±  git status -s
-         M audience.txt
-         M objectives.txt
-         M sales-page.txt
-         M sections/creating-snapshots/init.txt
-         M sections/creating-snapshots/staging-changes.txt
-         M toc.txt
+        danial@LYVR-G6423233FB  /mnt/c/Users/danial.arab/Desktop/git-course/branching/Venus   master  echo hello > newfile.txt
+         danial@LYVR-G6423233FB  /mnt/c/Users/danial.arab/Desktop/git-course/branching/Venus   master  git status -s
         ?? newfile.txt
 
 So if we stash the changes this new untracked file will not be included in the stash by default. To include it we need to use the --all or -a option:
 
-        danial@LYVR-G6423233FB  /mnt/c/Users/danial.arab/Desktop/git-course/Venus   master ±  git stash push --all -m "My new stash."
-        Saved working directory and index state On master: My new stash.
+        danial@LYVR-G6423233FB  /mnt/c/Users/danial.arab/Desktop/git-course/branching/Venus   master  git stash push --all -m "New stash."
+        Saved working directory and index state On master: New stash.
 
 to view our stashes:
 
@@ -2246,10 +2236,67 @@ each stash has a unique identifier, as shown above.
 
 Now we can switch to the other branch:
 
+        danial@LYVR-G6423233FB  /mnt/c/Users/danial.arab/Desktop/git-course/branching/Venus   master  git switch bugfix-signup-form
+        Switched to branch 'bugfix-signup-form'
+         danial@LYVR-G6423233FB  /mnt/c/Users/danial.arab/Desktop/git-course/branching/Venus   bugfix-signup-form 
 
+after we are done with our work in this branch we can get back to the master:
+
+        danial@LYVR-G6423233FB  /mnt/c/Users/danial.arab/Desktop/git-course/branching/Venus   bugfix-signup-form  git switch master
+        Switched to branch 'master'
+         danial@LYVR-G6423233FB  /mnt/c/Users/danial.arab/Desktop/git-course/branching/Venus   master 
+
+at this point, we may want to apply the changes from one of our stashes to our working directory but before doing so we want to look at those changes and see what lines of code have been modified:
+
+
+        danial@LYVR-G6423233FB  /mnt/c/Users/danial.arab/Desktop/git-course/branching/Venus   master  git stash show stash@{1}
+        
+         audience.txt | 4 ++--
+         1 file changed, 2 insertions(+), 2 deletions(-)
+        (END)
+
+we can also make git stash show stash@{1} shorter like git stash show 1
+
+        danial@LYVR-G6423233FB  /mnt/c/Users/danial.arab/Desktop/git-course/branching/Venus   master  git stash show 1
+        
+         audience.txt | 4 ++--
+         1 file changed, 2 insertions(+), 2 deletions(-)
+        (END)
+
+now we know that in stash 1 one file has been changed, which is audience.txt and we have two changes two insertions and  2 deletions. So we can go ahead and apply this stash in our working directory: 
+
+         danial@LYVR-G6423233FB  /mnt/c/Users/danial.arab/Desktop/git-course/branching/Venus   master  git stash apply 1
+        On branch master
+        Changes not staged for commit:
+          (use "git add <file>..." to update what will be committed)
+          (use "git restore <file>..." to discard changes in working directory)
+                modified:   audience.txt
+        
+        no changes added to commit (use "git add" and/or "git commit -a")
+ 
+when we are done with a stash we want to remove it to clean things up:
+
+        danial@LYVR-G6423233FB  /mnt/c/Users/danial.arab/Desktop/git-course/branching/Venus   master ±  git stash drop 1
+        Dropped refs/stash@{1} (4eb8ff357a7786d27e474574ae7ac25ff436ae19)
+
+now
+
+        danial@LYVR-G6423233FB  /mnt/c/Users/danial.arab/Desktop/git-course/branching/Venus   master ±  git stash list
+        
+        stash@{0}: On master: New stash.
+        (END)
+
+
+if we do not need this stash anymore we can also drop it like 'git stash drop 0', or to remove all the stashes we can:
+
+        danial@LYVR-G6423233FB  /mnt/c/Users/danial.arab/Desktop/git-course/branching/Venus   master ±  git stash clear
+
+now all the stashes are gone. 
 
 <a name="53"></a>
 ### Merging
+
+here
 
 <a name="54"></a>
 ### Fast-forward Merges
