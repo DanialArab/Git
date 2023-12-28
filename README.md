@@ -2263,7 +2263,7 @@ we can also make git stash show stash@{1} shorter like git stash show 1
          1 file changed, 2 insertions(+), 2 deletions(-)
         (END)
 
-now we know that in stash 1 one file has been changed, which is audience.txt and we have two changes two insertions and  2 deletions. So we can go ahead and apply this stash in our working directory: 
+now we know that in stash 1 one file has been changed, which is audience.txt, and as the changes we have two insertions and  2 deletions. So we can go ahead and apply this stash in our working directory: 
 
          danial@LYVR-G6423233FB  /mnt/c/Users/danial.arab/Desktop/git-course/branching/Venus   master  git stash apply 1
         On branch master
