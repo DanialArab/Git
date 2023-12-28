@@ -2190,7 +2190,26 @@ so once we merge the bugfix-signup-form branch into the master the file audience
 <a name="52"></a>
 ### Stashing
 
-here
+When we switch branches, Git resets our working directory to the snapshot stored in the last commit of the target branch. If we have local changes in our working directory that we have not committed yet these changes could get lost. In these situations, Git does not allow us to switch branches. 
+
+         danial@LYVR-G6423233FB  /mnt/c/Users/danial.arab/Desktop/git-course/V4    │enus   master ±  git status -s
+         dani│ M audience.txt
+        al   │ M objectives.txt
+         dani│ M sales-page.txt
+        a    │ M sections/creating-snapshots/init.txt
+         dani│ M sections/creating-snapshots/staging-changes.txt
+        al@LY│ M toc.txt
+         dani│ danial@LYVR-G6423233FB  /mnt/c/Users/danial.arab/Desktop/git-course/Venal@LY│us   master ±  git switch bugfix-signup-form
+        VR-G6│error: Your local changes to the following files would be overwritten by 42323│checkout:
+        3FB │        audience.txt
+         ~/tr│        objectives.txt
+        ansfo│        sales-page.txt
+        rmers│        sections/creating-snapshots/init.txt
+        _for_│        sections/creating-snapshots/staging-changes.txt
+        nlp/d│        toc.txt
+        ata │Please commit your changes or stash them before you switch branches.      ↱ ma│Aborting
+
+
 
 <a name="53"></a>
 ### Merging
