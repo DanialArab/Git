@@ -2192,22 +2192,59 @@ so once we merge the bugfix-signup-form branch into the master the file audience
 
 When we switch branches, Git resets our working directory to the snapshot stored in the last commit of the target branch. If we have local changes in our working directory that we have not committed yet these changes could get lost. In these situations, Git does not allow us to switch branches. 
 
-         danial@LYVR-G6423233FB  /mnt/c/Users/danial.arab/Desktop/git-course/V4    │enus   master ±  git status -s
-         dani│ M audience.txt
-        al   │ M objectives.txt
-         dani│ M sales-page.txt
-        a    │ M sections/creating-snapshots/init.txt
-         dani│ M sections/creating-snapshots/staging-changes.txt
-        al@LY│ M toc.txt
-         dani│ danial@LYVR-G6423233FB  /mnt/c/Users/danial.arab/Desktop/git-course/Venal@LY│us   master ±  git switch bugfix-signup-form
-        VR-G6│error: Your local changes to the following files would be overwritten by 42323│checkout:
-        3FB │        audience.txt
-         ~/tr│        objectives.txt
-        ansfo│        sales-page.txt
-        rmers│        sections/creating-snapshots/init.txt
-        _for_│        sections/creating-snapshots/staging-changes.txt
-        nlp/d│        toc.txt
-        ata │Please commit your changes or stash them before you switch branches.      ↱ ma│Aborting
+         danial@LYVR-G6423233FB  /mnt/c/Users/danial.arab/Desktop/git-course/Venus   master ±  git status -s
+         M audience.txt
+         M objectives.txt
+         M sales-page.txt
+         M sections/creating-snapshots/init.txt
+         M sections/creating-snapshots/staging-changes.txt
+         M toc.txt
+         danial@LYVR-G6423233FB  /mnt/c/Users/danial.arab/Desktop/git-course/Venus   master ±  git switch bugfix-signup-form
+        error: Your local changes to the following files would be overwritten by checkout:
+                audience.txt
+                objectives.txt
+                sales-page.txt
+                sections/creating-snapshots/init.txt
+                sections/creating-snapshots/staging-changes.txt
+                toc.txt
+        Please commit your changes or stash them before you switch branches.
+        Aborting
+
+Here is the Git error message "Please commit your changes or stash them before you switch branches.". In this case, I do not want to commit the changes let's say I am in the middle of something and I am not done yet and I just need to quickly switch to the other branch. In these situations, I need to stash the changes. Stashing something means storing it in a safe place. So we store the changes somewhere in our Git repo but this will not be part of our history. To stash the changes:
+
+
+        danial@LYVR-G6423233FB  /mnt/c/Users/danial.arab/Desktop/git-course/Venus   master ±  git stash push -m "New tax rules."
+        Saved working directory and index state On master: New tax rules.
+
+
+Remember: new untracked files are not by default included in your stash. 
+
+        danial@LYVR-G6423233FB  /mnt/c/Users/danial.arab/Desktop/git-course/Venus   master ±  echo hello > newfile.txt
+         danial@LYVR-G6423233FB  /mnt/c/Users/danial.arab/Desktop/git-course/Venus   master ±  git status -s
+         M audience.txt
+         M objectives.txt
+         M sales-page.txt
+         M sections/creating-snapshots/init.txt
+         M sections/creating-snapshots/staging-changes.txt
+         M toc.txt
+        ?? newfile.txt
+
+So if we stash the changes this new untracked file will not be included in the stash by default. To include it we need to use the --all or -a option:
+
+        danial@LYVR-G6423233FB  /mnt/c/Users/danial.arab/Desktop/git-course/Venus   master ±  git stash push --all -m "My new stash."
+        Saved working directory and index state On master: My new stash.
+
+to view our stashes:
+
+        danial@LYVR-G6423233FB  /mnt/c/Users/danial.arab/Desktop/git-course/Venus   master ±  git stash list
+        
+        stash@{0}: On master: My new stash.
+        stash@{1}: On master: New tax rules.
+        (END)
+
+each stash has a unique identifier, as shown above. 
+
+Now we can switch to the other branch:
 
 
 
