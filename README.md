@@ -2297,12 +2297,20 @@ now all the stashes are gone.
 ### Merging
 
 Merging is all about bringing changes from one branch to another. In Git we have two types of merges:
-+ Fast-forward merges
-+ 3-way merges
++ Fast-forward merges (it happens when branches have not diverged) 
++ 3-way merges (it happens when branches have diverged) 
 
-Fast-forward merges: let's say we have a master branch with three commits we create a new branch called bugfix, as discussed in Git a branch is just a pointer to a commit. At this point both master and bugfix are pointing to the same commit. Now we switch tothe bugfix branch and make two commits when we are done we need to bring the changes back to the master branch. Now because these branches have not diverged and there is  direct linear path from bugfix to master all Git has to do to merge the changes is to bring the master pointer forward. This is called a fast-forward merge. 
+**Fast-forward merges:** Let's say we have a master branch with three commits we create a new branch called bugfix, as discussed in Git a branch is just a pointer to a commit. At this point, both master and bugfix are pointing to the same commit. Now we switch to the bugfix branch and make two commits when we are done we need to bring the changes back to the master branch. Now because these branches have not diverged and there is  a direct linear path from bugfix to master all Git has to do to merge the changes is to bring the master pointer forward. This is called a fast-forward merge. 
 
 ![](https://github.com/DanialArab/images/blob/main/Git/fast-forward%20merge.png)
+
+Point: in fast-forward merging, we did not have any additional changes in the master branch so we could easily bring the master pointer forward. 
+
+Now after merging that we are done with the bugfix branch, we can simply remove it, which removes the poniter. 
+
+**3-way merge:** Let's say our bugfix branch is 2 commits ahead of the master branch but before we merge it with the master we went back to the master and made additional commit now our branches are diverged. Here we have some changes in the master that do not exist in the bugfix branch. If we run a merge Git cannot move the master pointer forward and have it point to the same commit as the bugfix because otherwise, we lose the latest commit in the master branch. When we run a merge Git creates a new commit that combines the changes from these two branches. This is called a 3-way merge merge because this new commit is based on three different commits: the common ancestor of our branches which includes the before code and the tips of our branches which contain the after code. So Git looks at three different snapshots: the before snapshot and the after snapshots and based on these it will figure out how to combine these changes so it creates a new commt called a **merge commit**. 
+
+![](https://github.com/DanialArab/images/blob/main/Git/three%20way%20merge.png)
 
 <a name="54"></a>
 ### Fast-forward Merges
