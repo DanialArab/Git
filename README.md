@@ -2357,13 +2357,83 @@ here
 ## Collaboration
 
 <a name="68"></a>
-### 
+### Introduction
 
 <a name="69"></a>
-### 
+### Workflows
 
+<a name="70"></a>
+### Creating a GitHub Repository
+
+<a name="71"></a>
+### Adding Collaborators
+
+<a name="72"></a>
+### Cloning a Repository
+
+<a name="73"></a>
+### Fetching
+
+<a name="74"></a>
+### Pulling
+
+<a name="75"></a>
+### Pushing
+
+<a name="76"></a>
+### Storing Credentials
+
+<a name="77"></a>
+### Sharing Tags
+
+<a name="78"></a>
+### Releases
+
+<a name="79"></a>
+### Sharing Branches
+
+<a name="80"></a>
+### Collaboration Workflow
+
+<a name="81"></a>
+### Pull Requests
+
+<a name="82"></a>
+### Resolving Conflicts
+
+<a name="83"></a>
+### Issues
+
+<a name="84"></a>
+### Labels
+
+<a name="85"></a>
+### Milestones
+
+<a name="86"></a>
+### Contributing to Open-source Projects
+
+<a name="87"></a>
+### Keeping a Forked Repository Up to Date
+
+<a name="88"></a>
+### Collaboration Using VSCode
+
+<a name="89"></a>
+### Collaboration Using GitKraken
+
+
+<a name="90"></a>
 ## Rewriting History
 
+<a name="91"></a>
+###
+
+<a name="92"></a>
+###
+
+<a name="93"></a>
+###
 
 ## 6. Git Cheat Sheet
 
