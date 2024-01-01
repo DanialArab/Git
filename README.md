@@ -2379,6 +2379,19 @@ these tools are super important and we use them every day working in a team.
 <a name="69"></a>
 ### Workflows
 
+As we discussed Git is a distributed version control system where every developer has a repository on their machine and so they are not dependent on a central server, they can work offline with their local repository. But how can we collaborate with this model? we can synchronize our work directories with eachother but this is often too complex and error-prone. Instead, we can use something called centralized workflow, as depicted below:
+
+![](https://github.com/DanialArab/images/blob/main/Git/centralized%20workflow.png)
+
+as shown above, everyone has their own local repository but there is also a central repository they use to synchronize their work. This is the workflow used in most private teams and close-source projects. But what is the point of this workflow? How is it better than the centralized version control system like subversion? With this model, **we do not have a single point of failure** we can work with our local repository and if the central repository is unavailable for a period of time we can synchronize our work directly, as shown below:
+
+![](https://github.com/DanialArab/images/blob/main/Git/centralized%20workflow%202.png)
+
+Where we should put this central repository so it is accessible to all team members? Some organizations put this repository on a private server on their private network. Others prefer to use Git hosting services like GitHub, GitLab, GitBucket, and so on. With all these services we can set up a repository as a private repository so it is only accessible to our team and no one else. Everyone in the team has push access to write to the central repository. However, we have another workflow for open-source projects called **integration-manager**. In an open-source project, we have one or more maintainers and many contributors. The problem is that we do not know these contributors. So we cannot trust them enough to give them push or write access to our repository. Only the maintainers of the project have push access to the project repository. So if we want to contribute to an open-source project, we should first **fork** the project repository to get a copy of this repository in the **cloud**. Next, we clone this repository to get a local copy on our machine. We make a few commits and when we are ready to share our work, we do a push to send our commits to our forked repository, which is on the cloud, next we send a pull request to the project maintainer this is a feature built into the platforms like GitHib. So the maintainer of the prject will get notified then they can pull in our changes review them and if they are happy then they can merge our work into their local repository and then push the merge changes to the official repository in the cloud. This is called the integration-manager workflow because someone is in charge of integrating chanegs we cannot push directly to this offifical repository and that is why we have to fork it to get a copy in the cloud because this repository is in the cloud it is also visible to the maintainer of the project and that is how they can pull in our chanegs 
+
+
+
+
 <a name="70"></a>
 ### Creating a GitHub Repository
 
