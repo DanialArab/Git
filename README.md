@@ -2353,11 +2353,28 @@ here
 <a name="66"></a>
 ### Branching in GitKraken
 
+
+
+
+
+
+
+
+
+
 <a name="67"></a>
 ## Collaboration
 
 <a name="68"></a>
 ### Introduction
+
+So far we have learned all the essential tools to manage a personal project, in this section, we learn about various tools we need to master to collaborate with others. We will focus on:
++ Most common collaboration workflows
++ pushing, fetching, and pulling  objects from a remote repository
++ essential collaboration tools on GitHub as the most popular Git hosting platform like pull requests, issues, and milestones
++ Contributing to open-source projects
+
+these tools are super important and we use them every day working in a team. 
 
 <a name="69"></a>
 ### Workflows
