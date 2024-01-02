@@ -2400,10 +2400,12 @@ The problem is that we do not know these contributors. So we cannot trust them e
 <a name="70"></a>
 ### Creating a GitHub Repository
 
-Here
+Pretty basic stuff!
 
 <a name="71"></a>
 ### Adding Collaborators
+
+Even though our repository is public no one can make a push or write to it, others can see our code and commit history but they cannot push new commits. So if we work in a team we have to add our team members and give them the push access. 
 
 <a name="72"></a>
 ### Cloning a Repository
