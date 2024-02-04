@@ -4,7 +4,7 @@ This repository documents my understanding of Git. The followings are my notes f
 
 # Table of content
 
-1. [Git Fundamental and Intro](#1) 
+1. [Git Fundamental and Intro](#1)
     1. [What Git is and why it is so popular](#2)
     2. [How to use Git](#3)
     3. [Git Configuration](#4)
